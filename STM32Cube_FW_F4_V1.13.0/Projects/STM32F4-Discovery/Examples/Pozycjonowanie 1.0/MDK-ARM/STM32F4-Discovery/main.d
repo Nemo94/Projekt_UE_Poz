@@ -37,11 +37,5 @@ stm32f4-discovery\main.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\stm32f4_d
 stm32f4-discovery\main.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\../Components/lis302dl/lis302dl.h
 stm32f4-discovery\main.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\../Components/lis302dl/../Common/accelero.h
 stm32f4-discovery\main.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\../Components/lis3dsh/lis3dsh.h
-stm32f4-discovery\main.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\stm32f4_discovery_audio.h
-stm32f4-discovery\main.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\../Components/cs43l22/cs43l22.h
-stm32f4-discovery\main.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\../Components/cs43l22/../Common/audio.h
-stm32f4-discovery\main.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\../../../Middlewares/ST/STM32_Audio/Addons/PDM/pdm_filter.h
 stm32f4-discovery\main.o: ..\Inc\mems.h
 stm32f4-discovery\main.o: ..\Inc\main.h
-stm32f4-discovery\main.o: ..\Inc\audio_play.h
-stm32f4-discovery\main.o: ..\Inc\audio_record.h

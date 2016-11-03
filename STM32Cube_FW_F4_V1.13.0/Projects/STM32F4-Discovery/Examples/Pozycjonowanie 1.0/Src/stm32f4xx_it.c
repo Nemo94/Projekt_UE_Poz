@@ -188,29 +188,6 @@ void EXTI1_IRQHandler(void)
   HAL_GPIO_EXTI_IRQHandler(ACCELERO_INT2_PIN);
 }
 
-/**
-  * @brief  This function handles main I2S interrupt. 
-  * @param  None
-  * @retval 0 if correct communication, else wrong communication
-  */
-void I2S3_IRQHandler(void)
-{ 
-  HAL_DMA_IRQHandler(hAudioOutI2s.hdmatx);
-}
-
-/**
-  * @brief  This function handles I2S IT Stream interrupt request.
-  * @param  None
-  * @retval None
-  */
-void I2S2_IRQHandler(void)
-{
-  HAL_DMA_IRQHandler(hAudioInI2s.hdmarx);
-}
-
-/**
-  * @}
-  */ 
 
 /**
   * @}

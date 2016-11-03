@@ -478,19 +478,9 @@
           <GroupName>Example/User</GroupName>
           <Files>
             <File>
-              <FileName>audio_play.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\audio_play.c</FilePath>
-            </File>
-            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\main.c</FilePath>
-            </File>
-            <File>
-              <FileName>audio_record.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\audio_record.c</FilePath>
             </File>
             <File>
               <FileName>mems.c</FileName>
@@ -517,21 +507,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\..\..\..\Drivers\BSP\Components\lis3dsh\lis3dsh.c</FilePath>
             </File>
-            <File>
-              <FileName>cs43l22.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\Drivers\BSP\Components\cs43l22\cs43l22.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>Drivers/BSP/STM32F4-Discovery</GroupName>
           <Files>
-            <File>
-              <FileName>stm32f4_discovery_audio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\stm32f4_discovery_audio.c</FilePath>
-            </File>
             <File>
               <FileName>stm32f4_discovery_accelerometer.c</FileName>
               <FileType>1</FileType>
@@ -551,16 +531,6 @@
               <FileName>system_stm32f4xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\system_stm32f4xx.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Middlewares/STM32_Audio</GroupName>
-          <Files>
-            <File>
-              <FileName>libPDMFilter_CM4_Keil.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>..\..\..\..\..\Middlewares\ST\STM32_Audio\Addons\PDM\libPDMFilter_CM4_Keil.lib</FilePath>
             </File>
           </Files>
         </Group>

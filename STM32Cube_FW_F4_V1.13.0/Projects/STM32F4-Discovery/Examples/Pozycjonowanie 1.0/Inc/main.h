@@ -42,30 +42,10 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4_discovery.h"
 #include "stm32f4_discovery_accelerometer.h"
-#include "stm32f4_discovery_audio.h"
 #include "mems.h"
-#include "audio_play.h"
-#include "audio_record.h"
 #include <stdio.h>
 
 /* Exported types ------------------------------------------------------------*/
-typedef struct
-{
-  void   (*DemoFunc)(void);
-  uint8_t DemoName[50]; 
-  uint32_t DemoIndex;
-}BSP_DemoTypedef;
-
-/* Exported constants --------------------------------------------------------*/
-#define COUNT_OF_EXAMPLE(x)     (sizeof(x)/sizeof(BSP_DemoTypedef))
-
-/* Size of the recorder buffer (Multiple of 4096, RAM_BUFFER_SIZE used in BSP) */
-#define WR_BUFFER_SIZE           0x7000
-
-/* Defines for the Audio playing process */
-#define PAUSE_STATUS     ((uint32_t)0x00) /* Audio Player in Pause Status */
-#define RESUME_STATUS    ((uint32_t)0x01) /* Audio Player in Resume Status */
-#define IDLE_STATUS      ((uint32_t)0x02) /* Audio Player in Idle Status */
 
 /* Exported functions ------------------------------------------------------- */
 void Toggle_Leds(void);

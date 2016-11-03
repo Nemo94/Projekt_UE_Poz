@@ -50,7 +50,6 @@
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
-extern __IO uint8_t UserPressButton;
 
 /* Init af threshold to detect acceleration on MEMS */
 /* Typical value: 
@@ -78,12 +77,7 @@ void ACCELERO_MEMS_Test(void)
     /* Initialization Error */
     Error_Handler(); 
   }
-  
-  UserPressButton = 0;
-  while(!UserPressButton)
-  {
     ACCELERO_ReadAcc();
-  }
 }
 
 /**
