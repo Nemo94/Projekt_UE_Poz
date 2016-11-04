@@ -3,11 +3,11 @@
 <title>Static Call Graph - [STM32F4-Discovery\STM32F4-Discovery.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image STM32F4-Discovery\STM32F4-Discovery.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060183: Last Updated: Fri Nov 04 07:52:38 2016
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060183: Last Updated: Fri Nov 04 14:57:03 2016
 <BR><P>
-<H3>Maximum Stack Usage =        168 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        176 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-LIS302DL_ReadACC &rArr; ACCELERO_IO_Read &rArr; SPIx_WriteRead &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+LIS302DL_ReadACC &rArr; ACCELERO_IO_Read &rArr; SPI2_WriteRead &rArr; SPI2_Init &rArr; SPI2_MspInit &rArr; HAL_GPIO_Init
 <P>
 <H3>
 Mutually Recursive functions
@@ -137,7 +137,7 @@ Global Symbols
 <P><STRONG><a name="[5d]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(.text)
 </UL>
-<P><STRONG><a name="[9d]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[9e]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[6c]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -147,15 +147,15 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[9e]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[9f]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[9f]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[a0]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[a0]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[a1]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[a1]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[a2]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[a2]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[a3]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f407xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
@@ -407,9 +407,9 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[a3]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[a4]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[6f]"></a>ACCELERO_IO_ITConfig</STRONG> (Thumb, 64 bytes, Stack size 32 bytes, stm32f4_discovery.o(i.ACCELERO_IO_ITConfig))
+<P><STRONG><a name="[6f]"></a>ACCELERO_IO_ITConfig</STRONG> (Thumb, 64 bytes, Stack size 32 bytes, mems.o(i.ACCELERO_IO_ITConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = ACCELERO_IO_ITConfig &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
@@ -420,12 +420,12 @@ Global Symbols
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LIS3DSH_Click_IntConfig
 </UL>
 
-<P><STRONG><a name="[73]"></a>ACCELERO_IO_Init</STRONG> (Thumb, 64 bytes, Stack size 32 bytes, stm32f4_discovery.o(i.ACCELERO_IO_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = ACCELERO_IO_Init &rArr; SPIx_Init &rArr; HAL_GPIO_Init
+<P><STRONG><a name="[73]"></a>ACCELERO_IO_Init</STRONG> (Thumb, 64 bytes, Stack size 32 bytes, mems.o(i.ACCELERO_IO_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = ACCELERO_IO_Init &rArr; SPI2_Init &rArr; SPI2_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI2_Init
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIx_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LIS302DL_ReadID
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LIS302DL_Init
@@ -433,11 +433,11 @@ Global Symbols
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LIS3DSH_Init
 </UL>
 
-<P><STRONG><a name="[76]"></a>ACCELERO_IO_Read</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, stm32f4_discovery.o(i.ACCELERO_IO_Read))
-<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = ACCELERO_IO_Read &rArr; SPIx_WriteRead &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<P><STRONG><a name="[76]"></a>ACCELERO_IO_Read</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, mems.o(i.ACCELERO_IO_Read))
+<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = ACCELERO_IO_Read &rArr; SPI2_WriteRead &rArr; SPI2_Init &rArr; SPI2_MspInit &rArr; HAL_GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIx_WriteRead
+<BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI2_WriteRead
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LIS302DL_RebootCmd
 <LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LIS302DL_ReadID
@@ -450,11 +450,11 @@ Global Symbols
 <LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LIS3DSH_ReadACC
 </UL>
 
-<P><STRONG><a name="[78]"></a>ACCELERO_IO_Write</STRONG> (Thumb, 68 bytes, Stack size 24 bytes, stm32f4_discovery.o(i.ACCELERO_IO_Write))
-<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = ACCELERO_IO_Write &rArr; SPIx_WriteRead &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<P><STRONG><a name="[78]"></a>ACCELERO_IO_Write</STRONG> (Thumb, 68 bytes, Stack size 24 bytes, mems.o(i.ACCELERO_IO_Write))
+<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = ACCELERO_IO_Write &rArr; SPI2_WriteRead &rArr; SPI2_Init &rArr; SPI2_MspInit &rArr; HAL_GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIx_WriteRead
+<BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI2_WriteRead
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LIS302DL_RebootCmd
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LIS302DL_InterruptConfig
@@ -585,9 +585,9 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Init
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_ITConfig
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI2_MspInit
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_PB_Init
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LED_Init
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIx_Init
 </UL>
 
 <P><STRONG><a name="[74]"></a>HAL_GPIO_WritePin</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f4xx_hal_gpio.o(i.HAL_GPIO_WritePin))
@@ -599,8 +599,8 @@ Global Symbols
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LED_Init
 </UL>
 
-<P><STRONG><a name="[9c]"></a>HAL_GetREVID</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f4xx_hal.o(i.HAL_GetREVID))
-<BR><BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<P><STRONG><a name="[9d]"></a>HAL_GetREVID</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f4xx_hal.o(i.HAL_GetREVID))
+<BR><BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
 <P><STRONG><a name="[84]"></a>HAL_GetTick</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_hal.o(i.HAL_GetTick))
@@ -611,7 +611,7 @@ Global Symbols
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 </UL>
 
-<P><STRONG><a name="[9a]"></a>HAL_IncTick</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f4xx_hal.o(i.HAL_IncTick))
+<P><STRONG><a name="[9b]"></a>HAL_IncTick</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f4xx_hal.o(i.HAL_IncTick))
 <BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
@@ -665,7 +665,7 @@ Global Symbols
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
 <P><STRONG><a name="[8e]"></a>HAL_RCC_GetSysClockFreq</STRONG> (Thumb, 104 bytes, Stack size 12 bytes, stm32f4xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq))
@@ -679,7 +679,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
 <P><STRONG><a name="[90]"></a>HAL_SPI_DeInit</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, stm32f4xx_hal_spi.o(i.HAL_SPI_DeInit))
@@ -687,11 +687,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspDeInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIx_WriteRead
+<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI2_WriteRead
 </UL>
 
 <P><STRONG><a name="[99]"></a>HAL_SPI_GetState</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_hal_spi.o(i.HAL_SPI_GetState))
-<BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIx_Init
+<BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI2_Init
 </UL>
 
 <P><STRONG><a name="[92]"></a>HAL_SPI_Init</STRONG> (Thumb, 140 bytes, Stack size 16 bytes, stm32f4xx_hal_spi.o(i.HAL_SPI_Init))
@@ -699,7 +699,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIx_Init
+<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI2_Init
 </UL>
 
 <P><STRONG><a name="[91]"></a>HAL_SPI_MspDeInit</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_hal_spi.o(i.HAL_SPI_MspDeInit))
@@ -717,7 +717,7 @@ Global Symbols
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFlagStateUntilTimeout
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_CheckFlag_BSY
 </UL>
-<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIx_WriteRead
+<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI2_WriteRead
 </UL>
 
 <P><STRONG><a name="[8b]"></a>HAL_SYSTICK_Config</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, stm32f4xx_hal_cortex.o(i.HAL_SYSTICK_Config))
@@ -736,18 +736,18 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
 </UL>
 <P><STRONG><a name="[63]"></a>LIS302DL_Click_IntClear</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, lis302dl.o(i.LIS302DL_Click_IntClear))
-<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = LIS302DL_Click_IntClear &rArr; ACCELERO_IO_Read &rArr; SPIx_WriteRead &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = LIS302DL_Click_IntClear &rArr; ACCELERO_IO_Read &rArr; SPI2_WriteRead &rArr; SPI2_Init &rArr; SPI2_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Read
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lis302dl.o(.data)
 </UL>
 <P><STRONG><a name="[62]"></a>LIS302DL_Click_IntConfig</STRONG> (Thumb, 164 bytes, Stack size 16 bytes, lis302dl.o(i.LIS302DL_Click_IntConfig))
-<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = LIS302DL_Click_IntConfig &rArr; LIS302DL_InterruptConfig &rArr; ACCELERO_IO_Write &rArr; SPIx_WriteRead &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = LIS302DL_Click_IntConfig &rArr; LIS302DL_InterruptConfig &rArr; ACCELERO_IO_Write &rArr; SPI2_WriteRead &rArr; SPI2_Init &rArr; SPI2_MspInit &rArr; HAL_GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Write
+<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LIS302DL_InterruptConfig
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Write
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_ITConfig
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LIS302DL_InterruptConfig
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lis302dl.o(.data)
 </UL>
@@ -755,7 +755,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> lis302dl.o(.data)
 </UL>
 <P><STRONG><a name="[64]"></a>LIS302DL_FilterConfig</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, lis302dl.o(i.LIS302DL_FilterConfig))
-<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = LIS302DL_FilterConfig &rArr; ACCELERO_IO_Write &rArr; SPIx_WriteRead &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = LIS302DL_FilterConfig &rArr; ACCELERO_IO_Write &rArr; SPI2_WriteRead &rArr; SPI2_Init &rArr; SPI2_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Write
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Read
@@ -763,7 +763,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> lis302dl.o(.data)
 </UL>
 <P><STRONG><a name="[5e]"></a>LIS302DL_Init</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, lis302dl.o(i.LIS302DL_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = LIS302DL_Init &rArr; ACCELERO_IO_Write &rArr; SPIx_WriteRead &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = LIS302DL_Init &rArr; ACCELERO_IO_Write &rArr; SPI2_WriteRead &rArr; SPI2_Init &rArr; SPI2_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Write
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Init
@@ -771,7 +771,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> lis302dl.o(.data)
 </UL>
 <P><STRONG><a name="[97]"></a>LIS302DL_InterruptConfig</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, lis302dl.o(i.LIS302DL_InterruptConfig))
-<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = LIS302DL_InterruptConfig &rArr; ACCELERO_IO_Write &rArr; SPIx_WriteRead &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = LIS302DL_InterruptConfig &rArr; ACCELERO_IO_Write &rArr; SPI2_WriteRead &rArr; SPI2_Init &rArr; SPI2_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Write
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Read
@@ -780,14 +780,14 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[65]"></a>LIS302DL_ReadACC</STRONG> (Thumb, 104 bytes, Stack size 48 bytes, lis302dl.o(i.LIS302DL_ReadACC))
-<BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = LIS302DL_ReadACC &rArr; ACCELERO_IO_Read &rArr; SPIx_WriteRead &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = LIS302DL_ReadACC &rArr; ACCELERO_IO_Read &rArr; SPI2_WriteRead &rArr; SPI2_Init &rArr; SPI2_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Read
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lis302dl.o(.data)
 </UL>
 <P><STRONG><a name="[60]"></a>LIS302DL_ReadID</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, lis302dl.o(i.LIS302DL_ReadID))
-<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = LIS302DL_ReadID &rArr; ACCELERO_IO_Read &rArr; SPIx_WriteRead &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = LIS302DL_ReadID &rArr; ACCELERO_IO_Read &rArr; SPI2_WriteRead &rArr; SPI2_Init &rArr; SPI2_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Read
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Init
@@ -795,7 +795,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> lis302dl.o(.data)
 </UL>
 <P><STRONG><a name="[61]"></a>LIS302DL_RebootCmd</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, lis302dl.o(i.LIS302DL_RebootCmd))
-<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = LIS302DL_RebootCmd &rArr; ACCELERO_IO_Write &rArr; SPIx_WriteRead &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = LIS302DL_RebootCmd &rArr; ACCELERO_IO_Write &rArr; SPI2_WriteRead &rArr; SPI2_Init &rArr; SPI2_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Write
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Read
@@ -803,7 +803,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> lis302dl.o(.data)
 </UL>
 <P><STRONG><a name="[6a]"></a>LIS3DSH_Click_IntConfig</STRONG> (Thumb, 210 bytes, Stack size 24 bytes, lis3dsh.o(i.LIS3DSH_Click_IntConfig))
-<BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = LIS3DSH_Click_IntConfig &rArr; LIS3DSH_InterruptConfig &rArr; ACCELERO_IO_Write &rArr; SPIx_WriteRead &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = LIS3DSH_Click_IntConfig &rArr; LIS3DSH_InterruptConfig &rArr; ACCELERO_IO_Write &rArr; SPI2_WriteRead &rArr; SPI2_Init &rArr; SPI2_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Write
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_ITConfig
@@ -815,7 +815,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> lis3dsh.o(.data)
 </UL>
 <P><STRONG><a name="[66]"></a>LIS3DSH_Init</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, lis3dsh.o(i.LIS3DSH_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = LIS3DSH_Init &rArr; ACCELERO_IO_Write &rArr; SPIx_WriteRead &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = LIS3DSH_Init &rArr; ACCELERO_IO_Write &rArr; SPI2_WriteRead &rArr; SPI2_Init &rArr; SPI2_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Write
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Init
@@ -823,7 +823,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> lis3dsh.o(.data)
 </UL>
 <P><STRONG><a name="[98]"></a>LIS3DSH_InterruptConfig</STRONG> (Thumb, 76 bytes, Stack size 16 bytes, lis3dsh.o(i.LIS3DSH_InterruptConfig))
-<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = LIS3DSH_InterruptConfig &rArr; ACCELERO_IO_Write &rArr; SPIx_WriteRead &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = LIS3DSH_InterruptConfig &rArr; ACCELERO_IO_Write &rArr; SPI2_WriteRead &rArr; SPI2_Init &rArr; SPI2_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Write
 </UL>
@@ -831,14 +831,14 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[6b]"></a>LIS3DSH_ReadACC</STRONG> (Thumb, 198 bytes, Stack size 40 bytes, lis3dsh.o(i.LIS3DSH_ReadACC))
-<BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = LIS3DSH_ReadACC &rArr; ACCELERO_IO_Read &rArr; SPIx_WriteRead &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = LIS3DSH_ReadACC &rArr; ACCELERO_IO_Read &rArr; SPI2_WriteRead &rArr; SPI2_Init &rArr; SPI2_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Read
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lis3dsh.o(.data)
 </UL>
 <P><STRONG><a name="[68]"></a>LIS3DSH_ReadID</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, lis3dsh.o(i.LIS3DSH_ReadID))
-<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = LIS3DSH_ReadID &rArr; ACCELERO_IO_Read &rArr; SPIx_WriteRead &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = LIS3DSH_ReadID &rArr; ACCELERO_IO_Read &rArr; SPI2_WriteRead &rArr; SPI2_Init &rArr; SPI2_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Read
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Init
@@ -846,7 +846,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> lis3dsh.o(.data)
 </UL>
 <P><STRONG><a name="[69]"></a>LIS3DSH_RebootCmd</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, lis3dsh.o(i.LIS3DSH_RebootCmd))
-<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = LIS3DSH_RebootCmd &rArr; ACCELERO_IO_Write &rArr; SPIx_WriteRead &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = LIS3DSH_RebootCmd &rArr; ACCELERO_IO_Write &rArr; SPI2_WriteRead &rArr; SPI2_Init &rArr; SPI2_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Write
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Read
@@ -870,7 +870,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
 </UL>
 <P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.SysTick_Handler))
-<BR><BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IncTick
+<BR><BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IncTick
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
 </UL>
@@ -884,11 +884,11 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
 </UL>
-<P><STRONG><a name="[a4]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[a5]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[a5]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[a6]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[a6]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[a7]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
 <P><STRONG><a name="[5b]"></a>main</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = main &rArr; SystemClock_Config &rArr; HAL_RCC_ClockConfig &rArr; HAL_InitTick &rArr; HAL_NVIC_SetPriority
@@ -897,7 +897,7 @@ Global Symbols
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LED_Off
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_LED_Init
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_MEMS_Test
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
@@ -927,12 +927,12 @@ Local Symbols
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_CheckFlag_BSY
 </UL>
 
-<P><STRONG><a name="[9b]"></a>SystemClock_Config</STRONG> (Thumb, 130 bytes, Stack size 88 bytes, main.o(i.SystemClock_Config))
+<P><STRONG><a name="[9c]"></a>SystemClock_Config</STRONG> (Thumb, 130 bytes, Stack size 88 bytes, main.o(i.SystemClock_Config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = SystemClock_Config &rArr; HAL_RCC_ClockConfig &rArr; HAL_InitTick &rArr; HAL_NVIC_SetPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetREVID
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetREVID
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -944,23 +944,31 @@ Local Symbols
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 </UL>
 
-<P><STRONG><a name="[75]"></a>SPIx_Init</STRONG> (Thumb, 136 bytes, Stack size 32 bytes, stm32f4_discovery.o(i.SPIx_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = SPIx_Init &rArr; HAL_GPIO_Init
+<P><STRONG><a name="[75]"></a>SPI2_Init</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, mems.o(i.SPI2_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = SPI2_Init &rArr; SPI2_MspInit &rArr; HAL_GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
+<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI2_MspInit
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Init
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_GetState
 </UL>
 <BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Init
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIx_WriteRead
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI2_WriteRead
 </UL>
 
-<P><STRONG><a name="[77]"></a>SPIx_WriteRead</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, stm32f4_discovery.o(i.SPIx_WriteRead))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = SPIx_WriteRead &rArr; HAL_SPI_TransmitReceive &rArr; SPI_CheckFlag_BSY &rArr; SPI_WaitFlagStateUntilTimeout
+<P><STRONG><a name="[9a]"></a>SPI2_MspInit</STRONG> (Thumb, 110 bytes, Stack size 40 bytes, mems.o(i.SPI2_MspInit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = SPI2_MspInit &rArr; HAL_GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_TransmitReceive
+<BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI2_Init
+</UL>
+
+<P><STRONG><a name="[77]"></a>SPI2_WriteRead</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, mems.o(i.SPI2_WriteRead))
+<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = SPI2_WriteRead &rArr; SPI2_Init &rArr; SPI2_MspInit &rArr; HAL_GPIO_Init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI2_Init
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_TransmitReceive
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_DeInit
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIx_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Write
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ACCELERO_IO_Read

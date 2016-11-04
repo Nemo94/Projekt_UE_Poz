@@ -170,7 +170,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
     //while (BSP_PB_GetState(BUTTON_KEY) != RESET);
   }
   
-  if(ACCELERO_INT2_PIN == GPIO_Pin) 
+  if(AKCELERO_INT2_PIN == GPIO_Pin) 
   {
     /* Clear MEMS click interruption */
     BSP_ACCELERO_Click_ITClear();

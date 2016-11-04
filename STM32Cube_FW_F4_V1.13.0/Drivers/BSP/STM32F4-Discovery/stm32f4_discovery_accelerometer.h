@@ -46,7 +46,8 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4_discovery.h"
-   
+#include "mems.h"
+	 
 /* Include Accelerometer component drivers */
 #include "../Components/lis302dl/lis302dl.h"   
 #include "../Components/lis3dsh/lis3dsh.h"   

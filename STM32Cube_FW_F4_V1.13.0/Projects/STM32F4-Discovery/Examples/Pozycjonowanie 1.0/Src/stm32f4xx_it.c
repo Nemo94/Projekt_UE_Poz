@@ -53,8 +53,7 @@
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
-extern I2S_HandleTypeDef       hAudioOutI2s;
-extern I2S_HandleTypeDef       hAudioInI2s;
+
 
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
@@ -185,7 +184,7 @@ void EXTI0_IRQHandler(void)
   */
 void EXTI1_IRQHandler(void)
 {
-  HAL_GPIO_EXTI_IRQHandler(ACCELERO_INT2_PIN);
+  HAL_GPIO_EXTI_IRQHandler(AKCELERO_INT2_PIN);
 }
 
 
