@@ -22,15 +22,22 @@ Dialog DLL:      TCM.DLL V1.14.9.0
  
 <h2>Project:</h2>
 C:\projekt_UE\Projekt_UE_Poz\STM32Cube_FW_F4_V1.13.0\Projects\STM32F4-Discovery\Examples\Pozycjonowanie 1.0\MDK-ARM\Project.uvprojx
-Project File Date:  10/28/2016
+Project File Date:  11/03/2016
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 2 (build 183)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'STM32F4-Discovery'
+compiling stm32f4_discovery_accelerometer.c...
 compiling main.c...
+compiling stm32f4xx_it.c...
+compiling stm32f4_discovery.c...
+compiling mems.c...
+..\Src\mems.c(92): warning:  #550-D: variable "zval" was set but never used
+    int16_t xval, yval, zval = 0x00;
+..\Src\mems.c: 1 warning, 0 errors
 linking...
 Program Size: Code=5754 RO-data=454 RW-data=164 ZI-data=1196  
-"STM32F4-Discovery\STM32F4-Discovery.axf" - 0 Error(s), 0 Warning(s).
+"STM32F4-Discovery\STM32F4-Discovery.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -48,7 +55,7 @@ Package Vendor: ARM
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.0.0
-Build Time Elapsed:  00:00:03
+Build Time Elapsed:  00:00:07
 </pre>
 </body>
 </html>
