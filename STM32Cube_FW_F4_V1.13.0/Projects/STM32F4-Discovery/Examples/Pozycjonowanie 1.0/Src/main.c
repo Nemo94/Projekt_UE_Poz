@@ -90,7 +90,6 @@ int main(void)
   BSP_LED_Off(LED5);
   BSP_LED_Off(LED6);
   
-  /* 1. Start Test: Wait For User inputs -------------------------------------*/
   while(1)
   {
 

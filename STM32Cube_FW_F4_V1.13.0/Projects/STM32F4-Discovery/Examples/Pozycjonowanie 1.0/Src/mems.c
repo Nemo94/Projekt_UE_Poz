@@ -87,16 +87,18 @@ void ACCELERO_MEMS_Test(void)
   */
 static void ACCELERO_ReadAcc(void)
 {
-  /* Accelerometer variables */
+
   int16_t buffer[3] = {0};
-  int16_t xval, yval = 0x00;
+  int16_t xval, yval, zval = 0x00;
   
-  /* Read Acceleration */
+  /* pobieramy dane i zapisujemy w buforach X, Y, Z */
   BSP_ACCELERO_GetXYZ(buffer);
   
   xval = buffer[0];
   yval = buffer[1];
+	zval = buffer[2];
   
+	//zapalenie diod w zaleznosci od przyspieszenia osi - zrobione w przykladzie producenta
   if((ABS(xval))>(ABS(yval)))
   {
     if(xval > ThresholdHigh)
