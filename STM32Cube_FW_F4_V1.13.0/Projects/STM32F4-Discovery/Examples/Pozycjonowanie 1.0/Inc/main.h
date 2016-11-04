@@ -50,6 +50,10 @@
 /* Exported functions ------------------------------------------------------- */
 void Toggle_Leds(void);
 void Error_Handler(void);
+extern void I2C1_Init(void);
+extern void ReadAccelero(void);
+
+
 
 #endif /* __MAIN_H */
 

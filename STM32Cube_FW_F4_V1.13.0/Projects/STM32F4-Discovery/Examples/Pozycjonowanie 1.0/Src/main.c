@@ -84,6 +84,18 @@ int main(void)
   /* Configure USER Button */
   BSP_PB_Init(BUTTON_KEY, BUTTON_MODE_EXTI);
   
+	
+	
+	 /* Inicjalizacja MEMS */
+  if(BSP_ACCELERO_Init() != HAL_OK)
+  {
+    /* Initialization Error */
+    Error_Handler(); 
+  }
+	
+	//inicjalizuj I2C do magnetometru
+	
+	I2C1_Init();
 
   BSP_LED_Off(LED3);
   BSP_LED_Off(LED4);
@@ -93,7 +105,7 @@ int main(void)
   while(1)
   {
 
-			ACCELERO_MEMS_Test();
+			ReadAccelero();
   }
 }
 

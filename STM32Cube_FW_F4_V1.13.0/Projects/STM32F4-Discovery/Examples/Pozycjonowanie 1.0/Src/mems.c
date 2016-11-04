@@ -63,7 +63,6 @@ uint32_t Spi2Timeout = SPI2_TIMEOUT_MAX;    /*<! Value of Timeout when SPI commu
 static SPI_HandleTypeDef 	AkceleroSpiHandle;
 
 /* Private function prototypes -----------------------------------------------*/
-static void ACCELERO_ReadAcc(void);
 
 static void     SPI2_Init(void);
 static void     SPI2_MspInit(void);
@@ -280,30 +279,7 @@ void ACCELERO_IO_Read(uint8_t *pBuffer, uint8_t ReadAddr, uint16_t NumByteToRead
   AKCELERO_CS_HIGH();
 }
 
-
-/**
-  * @brief  Test ACCELERATOR MEMS Hardware.
-  *         The main objective of this test is to check acceleration on 2 axes X and Y
-  * @param  None
-  * @retval None
-  */
-void ACCELERO_MEMS_Test(void)
-{
-  /* Init Accelerometer MEMS */
-  if(BSP_ACCELERO_Init() != HAL_OK)
-  {
-    /* Initialization Error */
-    Error_Handler(); 
-  }
-    ACCELERO_ReadAcc();
-}
-
-/**
-  * @brief  Read Acceleration data.
-  * @param  None
-  * @retval None
-  */
-static void ACCELERO_ReadAcc(void)
+void ReadAccelero(void)
 {
 
   int16_t buffer[3] = {0};

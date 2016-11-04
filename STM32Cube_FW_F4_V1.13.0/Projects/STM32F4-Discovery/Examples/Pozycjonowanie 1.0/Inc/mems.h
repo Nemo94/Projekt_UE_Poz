@@ -76,7 +76,8 @@
 
 
 /* Exported functions ------------------------------------------------------- */
-void ACCELERO_MEMS_Test(void);
+void ReadAccelero(void);
+
 #endif /* __MEMS_H */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
