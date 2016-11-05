@@ -18,6 +18,7 @@ Nastepne kroki do zrobienia w projekcie:
 PODLACZENIE:
 
 Do konwertera UART - USB
+
  PB11------> USART3_RX
 
  PD8------> USART3_TX 
@@ -25,6 +26,7 @@ Do konwertera UART - USB
  GND ---> GND
  
  Do akcelerometru:
+ 
  PD0 - INT1
  
  PD1 - INT2
@@ -38,6 +40,7 @@ Do konwertera UART - USB
  PB13 - SCK
  
  Do magnetometru:
+ 
  PB6------> SCL
  
  PB9------> SDA 
