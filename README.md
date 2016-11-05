@@ -39,4 +39,5 @@ Do konwertera UART - USB
  
  Do magnetometru:
  PB6------> SCL
+ 
  PB9------> SDA 
