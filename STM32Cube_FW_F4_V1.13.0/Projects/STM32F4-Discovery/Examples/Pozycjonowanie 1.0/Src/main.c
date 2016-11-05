@@ -52,6 +52,15 @@
 /* Private variables ---------------------------------------------------------*/
 
 
+//zmienne z aktualnymi danymi akcelerometru, do przetwarzania!
+uint16_t akcelero_x=0;
+uint16_t akcelero_y=0;
+uint16_t akcelero_z=0;
+
+
+//aktualny kat w stopniach od polnocy 0-359, do przetwarzania dalej!
+uint16_t kat_od_polnocy=0;
+
 /* Private function prototypes -----------------------------------------------*/
 static void SystemClock_Config(void);
 
@@ -93,10 +102,20 @@ int main(void)
     Error_Handler(); 
   }
 	
-	//inicjalizuj I2C do magnetometru
+	//inicjalizuj I2C do magnetometru, a potem jego oraz go wyskaluj
 	
 	I2C1_Init();
-
+	
+	uint8_t magnetometer_is_working = 0;
+	
+	magnetometer_is_working = HMC5883_Init();
+	
+	if(magnetometer_is_working)
+	{
+		//wartosci realne do ustawienia w typedefie w main.h
+		SetMagnetometerScaleValue(HMC5883_8G1);
+	}
+	
   BSP_LED_Off(LED3);
   BSP_LED_Off(LED4);
   BSP_LED_Off(LED5);
@@ -106,6 +125,13 @@ int main(void)
   {
 
 			ReadAccelero();
+			HMC5883_Read();
+		//tu znajduja sie aktualizowane w powyzszych funkcjach dane z akcelerometru i kompasu
+		//akcelero_x
+		//akcelero_y
+		//akcelero_z
+		//kat_od_polnocy
+
   }
 }
 
@@ -189,6 +215,21 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
   }
 }
 
+
+void SetMagnetometerScaleValue(HMC5883_SCALE_t scale)
+{	
+	uint16_t value;
+  if(scale==HMC5883_0G8) value=0x00;
+	else if(scale==HMC5883_1G3) value=0x20;
+  else if(scale==HMC5883_1G9) value=0x40;
+  else if(scale==HMC5883_2G5) value=0x60;
+  else if(scale==HMC5883_4G0) value=0x80;
+  else if(scale==HMC5883_4G7) value=0xA0;
+  else if(scale==HMC5883_5G6) value=0xC0;
+  else if(scale==HMC5883_8G1) value=0xE0;
+	HMC5883_SetScale(value);
+}
+
 /**
   * @brief  Toggle LEDs
   * @param  None
@@ -219,6 +260,8 @@ void Error_Handler(void)
 	HAL_Delay(5000);
   NVIC_SystemReset();
 }
+
+
 
 #ifdef USE_FULL_ASSERT
 

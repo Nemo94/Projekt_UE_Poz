@@ -43,7 +43,22 @@
 #include "stm32f4_discovery.h"
 #include "stm32f4_discovery_accelerometer.h"
 #include "mems.h"
+#include "magnetometr.h"
 #include <stdio.h>
+
+typedef enum HMC5883_SCALE_t HMC5883_SCALE_t;
+	
+enum HMC5883_SCALE_t{
+  HMC5883_0G8 = 0,  // +/- 0,88 Gauss
+  HMC5883_1G3,      // +/- 1,3 Gauss (default)
+  HMC5883_1G9,      // +/- 1,9 Gauss
+  HMC5883_2G5,      // +/- 2,5 Gauss
+  HMC5883_4G0,      // +/- 4,0 Gauss
+  HMC5883_4G7,      // +/- 4,7 Gauss
+  HMC5883_5G6,      // +/- 5,6 Gauss
+  HMC5883_8G1       // +/- 8,1 Gauss
+};
+
 
 /* Exported types ------------------------------------------------------------*/
 
@@ -52,6 +67,11 @@ void Toggle_Leds(void);
 void Error_Handler(void);
 extern void I2C1_Init(void);
 extern void ReadAccelero(void);
+extern uint8_t HMC5883_Init(void);
+extern uint8_t HMC5883_Read(void);
+extern void HMC5883_Start_Calibration(void);
+extern void HMC5883_Stop_Calibration(void);
+void SetMagnetometerScaleValue(HMC5883_SCALE_t scale);
 
 
 

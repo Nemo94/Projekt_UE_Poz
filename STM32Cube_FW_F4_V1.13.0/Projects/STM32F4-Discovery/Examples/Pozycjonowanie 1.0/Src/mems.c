@@ -292,6 +292,10 @@ void ReadAccelero(void)
   yval = buffer[1];
 	zval = buffer[2];
   
+	akcelero_x = xval;
+	akcelero_y = yval;
+	akcelero_z = zval;
+	
 	//zapalenie diod w zaleznosci od przyspieszenia osi - zrobione w przykladzie producenta
   if((ABS(xval))>(ABS(yval)))
   {

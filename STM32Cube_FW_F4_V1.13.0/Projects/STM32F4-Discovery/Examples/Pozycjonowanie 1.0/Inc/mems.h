@@ -73,7 +73,9 @@
 #define AKCELERO_INT2_PIN                      GPIO_PIN_1                 /* PD.01 */
 #define AKCELERO_INT2_EXTI_IRQn                EXTI1_IRQn 
 
-
+extern uint16_t akcelero_x;
+extern uint16_t akcelero_y;
+extern uint16_t akcelero_z;
 
 /* Exported functions ------------------------------------------------------- */
 void ReadAccelero(void);

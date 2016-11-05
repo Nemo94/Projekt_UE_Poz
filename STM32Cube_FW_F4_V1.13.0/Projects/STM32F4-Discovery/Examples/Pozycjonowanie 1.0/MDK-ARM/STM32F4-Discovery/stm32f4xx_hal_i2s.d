@@ -31,3 +31,7 @@ stm32f4-discovery\stm32f4xx_hal_i2s.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driv
 stm32f4-discovery\stm32f4xx_hal_i2s.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h
 stm32f4-discovery\stm32f4xx_hal_i2s.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h
 stm32f4-discovery\stm32f4xx_hal_i2s.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h
+stm32f4-discovery\stm32f4xx_hal_i2s.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h
+stm32f4-discovery\stm32f4xx_hal_i2s.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h
+stm32f4-discovery\stm32f4xx_hal_i2s.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h
+stm32f4-discovery\stm32f4xx_hal_i2s.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_usart.h

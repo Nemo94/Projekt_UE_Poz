@@ -33,10 +33,16 @@ stm32f4-discovery\stm32f4xx_it.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\In
 stm32f4-discovery\stm32f4xx_it.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h
 stm32f4-discovery\stm32f4xx_it.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h
 stm32f4-discovery\stm32f4xx_it.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h
+stm32f4-discovery\stm32f4xx_it.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h
+stm32f4-discovery\stm32f4xx_it.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h
+stm32f4-discovery\stm32f4xx_it.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h
+stm32f4-discovery\stm32f4xx_it.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_usart.h
 stm32f4-discovery\stm32f4xx_it.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\stm32f4_discovery_accelerometer.h
 stm32f4-discovery\stm32f4xx_it.o: ..\Inc\mems.h
 stm32f4-discovery\stm32f4xx_it.o: ..\Inc\main.h
 stm32f4-discovery\stm32f4xx_it.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\../Components/lis302dl/lis302dl.h
 stm32f4-discovery\stm32f4xx_it.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\../Components/lis302dl/../Common/accelero.h
 stm32f4-discovery\stm32f4xx_it.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\../Components/lis3dsh/lis3dsh.h
+stm32f4-discovery\stm32f4xx_it.o: ..\Inc\magnetometr.h
+stm32f4-discovery\stm32f4xx_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 stm32f4-discovery\stm32f4xx_it.o: ..\Inc\stm32f4xx_it.h
