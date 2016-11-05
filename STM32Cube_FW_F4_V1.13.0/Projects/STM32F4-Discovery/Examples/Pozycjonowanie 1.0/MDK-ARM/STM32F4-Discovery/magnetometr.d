@@ -1,4 +1,4 @@
-stm32f4-discovery\magnetometr.o: magnetometr.c
+stm32f4-discovery\magnetometr.o: ..\Src\magnetometr.c
 stm32f4-discovery\magnetometr.o: ..\Inc\magnetometr.h
 stm32f4-discovery\magnetometr.o: ..\Inc\main.h
 stm32f4-discovery\magnetometr.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\stm32f4_discovery.h

@@ -478,11 +478,6 @@
           <GroupName>Example/User</GroupName>
           <Files>
             <File>
-              <FileName>magnetometr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\magnetometr.c</FilePath>
-            </File>
-            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\main.c</FilePath>
@@ -496,6 +491,16 @@
               <FileName>stm32f4xx_it.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\stm32f4xx_it.c</FilePath>
+            </File>
+            <File>
+              <FileName>magnetometr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\magnetometr.c</FilePath>
+            </File>
+            <File>
+              <FileName>uart_config.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\uart_config.c</FilePath>
             </File>
           </Files>
         </Group>
