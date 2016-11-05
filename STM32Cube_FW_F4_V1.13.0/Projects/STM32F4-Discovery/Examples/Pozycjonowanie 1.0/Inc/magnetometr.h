@@ -9,7 +9,9 @@
 
 #define M_PI 3.1415926f
 
-#define   HMC5883_SLAVE_ADR   0x3C
+#define   HMC5883_WRITE_ADDR   0x3C
+#define   HMC5883_READ_ADDR    0x3D
+
 
 
 

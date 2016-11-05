@@ -131,10 +131,10 @@ uint8_t HMC5883_Init(void)
 
 	HAL_Delay(HMC5883_POWERON_DELAY);
 	
-		sukces = Magnetometr_WriteCommand(HMC5883_SLAVE_ADR, HMC5883_REG_IDA );
+		sukces = Magnetometr_WriteCommand(HMC5883_WRITE_ADDR, HMC5883_REG_IDA );
 		if (sukces != 0 )
 		{
-			sukces = Magnetometr_Read(HMC5883_SLAVE_ADR, data, 1 );
+			sukces = Magnetometr_Read(HMC5883_READ_ADDR, data, 1 );
 		}
 		
 		if(sukces!=0)
@@ -142,10 +142,10 @@ uint8_t HMC5883_Init(void)
 			if(data[0]==HMC5883_IDA_VALUE) ok++;
 		}
 		
-				sukces = Magnetometr_WriteCommand(HMC5883_SLAVE_ADR, HMC5883_REG_IDB );
+				sukces = Magnetometr_WriteCommand(HMC5883_WRITE_ADDR, HMC5883_REG_IDB );
 		if (sukces != 0 )
 		{
-			sukces = Magnetometr_Read(HMC5883_SLAVE_ADR, data, 1 );
+			sukces = Magnetometr_Read(HMC5883_READ_ADDR, data, 1 );
 		}
 		
 		if(sukces!=0)
@@ -153,10 +153,10 @@ uint8_t HMC5883_Init(void)
 			if(data[0]==HMC5883_IDB_VALUE) ok++;
 		}
 		
-				sukces = Magnetometr_WriteCommand(HMC5883_SLAVE_ADR, HMC5883_REG_IDC );
+				sukces = Magnetometr_WriteCommand(HMC5883_WRITE_ADDR, HMC5883_REG_IDC );
 		if (sukces != 0 )
 		{
-			sukces = Magnetometr_Read(HMC5883_SLAVE_ADR, data, 1 );
+			sukces = Magnetometr_Read(HMC5883_READ_ADDR, data, 1 );
 		}
 		
 		if(sukces!=0)
@@ -189,16 +189,16 @@ uint8_t HMC5883_Read(void)
   HAL_Delay(HMC5883_READ_DELAY);
 
   // tryb Single-Measurement-Mode
-	sukces = Magnetometr_WriteData(HMC5883_SLAVE_ADR, data, 2 );
+	sukces = Magnetometr_WriteData(HMC5883_WRITE_ADDR, data, 2 );
 
   if(sukces!=0) 
 	{			
 		//czekaj na koniec pomiaru, 6 ms (pdf) +1 ms na zapas
 		HAL_Delay(7);		
-		sukces = Magnetometr_WriteCommand(HMC5883_SLAVE_ADR, HMC5883_REG_DATA );
+		sukces = Magnetometr_WriteCommand(HMC5883_WRITE_ADDR, HMC5883_REG_DATA );
 		if (sukces != 0 )
 		{
-			sukces = Magnetometr_Read(HMC5883_SLAVE_ADR, data, 6 );
+			sukces = Magnetometr_Read(HMC5883_READ_ADDR, data, 6 );
 		}
 		
 		if(sukces != 0)
@@ -236,7 +236,7 @@ uint8_t HMC5883_SetScale(uint16_t value)
 		data[1] = value;
 
 
-		sukces = Magnetometr_WriteData(HMC5883_SLAVE_ADR, data, 2 );
+		sukces = Magnetometr_WriteData(HMC5883_WRITE_ADDR, data, 2 );
 
   if(sukces !=0) powrot=1;
 

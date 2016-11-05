@@ -2,7 +2,10 @@
 Pozycjonowanie
 
 
-Wersja 1.0 - powinna dzialac z akcelerometrem LIS3DH, ktory zamowilismy oraz magnetometrem HMC5883, a takze wyswietlac dane na konsoli ustawionej na 9600, wymaga podlaczenia odpowiednich pinow do zewnetrznego konwertera UART -> USB
+Wersja 1.0
+
+Co zostalo zrobione:
+ - powinna dzialac z akcelerometrem LIS3DH, ktory zamowilismy oraz magnetometrem HMC5883, a takze wyswietlac dane na konsoli ustawionej na 9600, wymaga podlaczenia odpowiednich pinow do zewnetrznego konwertera UART -> USB
 
 Nastepne kroki do zrobienia w projekcie:
 - sprawdzenie obslugi zewnetrznego akceleroemetru pod SPI
