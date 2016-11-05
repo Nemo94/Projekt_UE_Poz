@@ -7,7 +7,7 @@
 #include "main.h"
 #include <math.h>
 
-#define M_PI 3.1415926
+#define M_PI 3.1415926f
 
 #define   HMC5883_SLAVE_ADR   0x3C
 

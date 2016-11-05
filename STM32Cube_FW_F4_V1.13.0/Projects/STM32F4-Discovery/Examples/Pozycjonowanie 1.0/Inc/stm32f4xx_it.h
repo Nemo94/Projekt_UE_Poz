@@ -61,8 +61,7 @@ void PendSV_Handler(void);
 void SysTick_Handler(void);
 void EXTI0_IRQHandler(void);
 void EXTI1_IRQHandler(void);
-void I2S3_IRQHandler(void);
-void I2S2_IRQHandler(void);
+extern UART_HandleTypeDef Usart3Handle;
 #ifdef __cplusplus
 }
 #endif

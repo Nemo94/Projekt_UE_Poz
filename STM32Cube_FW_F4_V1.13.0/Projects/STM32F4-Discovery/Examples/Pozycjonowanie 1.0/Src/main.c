@@ -116,6 +116,8 @@ int main(void)
 		SetMagnetometerScaleValue(HMC5883_8G1);
 	}
 	
+	USART3_Init();
+	
   BSP_LED_Off(LED3);
   BSP_LED_Off(LED4);
   BSP_LED_Off(LED5);
@@ -131,9 +133,22 @@ int main(void)
 		//akcelero_y
 		//akcelero_z
 		//kat_od_polnocy
+		
+		printf("akcelero_x=%u\n", akcelero_x);
+		printf("akcelero_y=%u\n", akcelero_y);
+		printf("akcelero_z=%u\n", akcelero_z);
+		printf("kat_od_polnocy=%u\n", kat_od_polnocy);
+		HAL_Delay(5000);
 
   }
 }
+
+int __io_putchar(int c)
+{
+    send_char(c);
+    return c;
+}
+
 
 /**
   * @brief  System Clock Configuration
@@ -260,6 +275,7 @@ void Error_Handler(void)
 	HAL_Delay(5000);
   NVIC_SystemReset();
 }
+
 
 
 

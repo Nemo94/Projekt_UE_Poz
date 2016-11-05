@@ -8,6 +8,9 @@
 
 
 
+void USART3_Init(void);
+void send_char(char c);
+UART_HandleTypeDef Usart3Handle;
 
 
 #endif

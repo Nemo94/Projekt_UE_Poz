@@ -187,6 +187,12 @@ void EXTI1_IRQHandler(void)
   HAL_GPIO_EXTI_IRQHandler(AKCELERO_INT2_PIN);
 }
 
+void UART5_IRQHandler(void)
+{
+	  HAL_UART_IRQHandler(&Usart3Handle);
+
+}
+
 
 /**
   * @}

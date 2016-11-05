@@ -15,6 +15,8 @@
 "stm32f4-discovery\stm32f4xx_hal_rcc_ex.o"
 "stm32f4-discovery\stm32f4xx_hal_spi.o"
 "stm32f4-discovery\stm32f4xx_hal_gpio.o"
+"stm32f4-discovery\stm32f4xx_hal_uart.o"
+"stm32f4-discovery\stm32f4xx_hal_usart.o"
 "stm32f4-discovery\main.o"
 "stm32f4-discovery\mems.o"
 "stm32f4-discovery\stm32f4xx_it.o"
