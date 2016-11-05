@@ -15,3 +15,21 @@ Nastepne kroki do zrobienia w projekcie:
 - przetowrzenie danych na liczbe krokow?
 
 
+PODLACZENIE:
+
+Do konwertera UART - USB
+ PB11------> USART3_RX
+ PD8------> USART3_TX 
+ GND ---> GND
+ 
+ Do akcelerometru:
+ PD0 - INT1
+ PD1 - INT2
+ PD3 - CS
+ PC2 - MISO
+ PB15 - MOSI
+ PB13 - SCK
+ 
+ Do magnetometru:
+ PB6------> SCL
+ PB9------> SDA 
