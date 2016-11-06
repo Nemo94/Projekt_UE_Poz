@@ -123,6 +123,8 @@ int main(void)
   BSP_LED_Off(LED5);
   BSP_LED_Off(LED6);
   
+			AllSteppersInit(NUMBER_OF_MOTORS);
+	
   while(1)
   {
 
@@ -141,7 +143,7 @@ int main(void)
 		HAL_Delay(5000);
 		
 		
-		AllSteppersInit(NUMBER_OF_MOTORS);
+
 		
 		
 		//wlacz uklady sterujace silnikami
