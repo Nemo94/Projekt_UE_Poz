@@ -49,5 +49,8 @@ Do konwertera UART - USB
 Sterowniki silnikow krokowych:
 
 PE4, PE7, PE10, PE13 - EN
+
 PE5, PE8, PE11, PE14 - DIR
+
 PE6, PE9, PE12, PE15 - STEP
+
