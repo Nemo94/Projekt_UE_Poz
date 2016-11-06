@@ -6,12 +6,13 @@ Wersja 1.0
 
 Co zostalo zrobione:
  - powinna dzialac z akcelerometrem LIS3DH, ktory zamowilismy oraz magnetometrem HMC5883, a takze wyswietlac dane na konsoli ustawionej na 9600, wymaga podlaczenia odpowiednich pinow do zewnetrznego konwertera UART -> USB
+ - napisalem sterownik, ktory steruje 4 ukladami DRV8825 StepStick i tym samym 4 silnikami krokowymi - obsluga wlaczenia, wylaczenia, kierunku i zadania liczby krokow
 
 Nastepne kroki do zrobienia w projekcie:
 - sprawdzenie obslugi zewnetrznego akceleroemetru pod SPI
 - sprawdzenie obslugi zewnetrznego magnerometru pod I2C
 - sprawdzenie i w przypadku niedzialania, poprawienie algorytmu umozliwiajacego wyswietlanie mierzonych danych na konsoli przez UART
-- obsluga silnikow za pomoca mostkow albo sterownikow silnikow krokowych?
+- sprawdzenie sterowania silnikami
 - przetowrzenie danych na liczbe krokow?
 
 
@@ -44,3 +45,9 @@ Do konwertera UART - USB
  PB6------> SCL
  
  PB9------> SDA 
+
+Sterowniki silnikow krokowych:
+
+PE4, PE7, PE10, PE13 - EN
+PE5, PE8, PE11, PE14 - DIR
+PE6, PE9, PE12, PE15 - STEP

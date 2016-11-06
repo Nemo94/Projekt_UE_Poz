@@ -45,4 +45,5 @@ stm32f4-discovery\magnetometr.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\..
 stm32f4-discovery\magnetometr.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\../Components/lis302dl/../Common/accelero.h
 stm32f4-discovery\magnetometr.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\../Components/lis3dsh/lis3dsh.h
 stm32f4-discovery\magnetometr.o: ..\Inc\magnetometr.h
+stm32f4-discovery\magnetometr.o: ..\Inc\stepper_driver.h
 stm32f4-discovery\magnetometr.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

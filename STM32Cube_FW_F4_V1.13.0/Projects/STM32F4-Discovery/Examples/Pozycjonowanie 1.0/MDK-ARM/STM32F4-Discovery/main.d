@@ -45,3 +45,4 @@ stm32f4-discovery\main.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\../Compon
 stm32f4-discovery\main.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\../Components/lis3dsh/lis3dsh.h
 stm32f4-discovery\main.o: ..\Inc\magnetometr.h
 stm32f4-discovery\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+stm32f4-discovery\main.o: ..\Inc\stepper_driver.h

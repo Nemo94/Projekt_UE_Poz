@@ -139,6 +139,36 @@ int main(void)
 		printf("akcelero_z=%u\n", akcelero_z);
 		printf("kat_od_polnocy=%u\n", kat_od_polnocy);
 		HAL_Delay(5000);
+		
+		
+		AllSteppersInit(NUMBER_OF_MOTORS);
+		
+		
+		//wlacz uklady sterujace silnikami
+		StepperXEnable(MOTOR1);
+		StepperXEnable(MOTOR2);
+		StepperXEnable(MOTOR3);
+		StepperXEnable(MOTOR4);
+		
+		//wykonuja odpowiednia ilosc krokow w pierwszym kierunku
+		StepperXExecute(MOTOR1, 10, 0);
+		StepperXExecute(MOTOR2, 20, 0);
+		StepperXExecute(MOTOR3, 50, 0);
+		StepperXExecute(MOTOR4, 100, 0);
+		
+		//wykonuja taka sama liczbe krokow w odwrotnym kierunku, powracajac do poczatkowego polozenia
+		StepperXExecute(MOTOR1, 10, 1);
+		StepperXExecute(MOTOR2, 20, 1);
+		StepperXExecute(MOTOR3, 50, 1);
+		StepperXExecute(MOTOR4, 100, 1);
+		
+		//wylacz uklady sterujace silnikami
+		StepperXDisable(MOTOR1);
+		StepperXDisable(MOTOR2);
+		StepperXDisable(MOTOR3);
+		StepperXDisable(MOTOR4);
+		
+		HAL_Delay(5000);
 
   }
 }

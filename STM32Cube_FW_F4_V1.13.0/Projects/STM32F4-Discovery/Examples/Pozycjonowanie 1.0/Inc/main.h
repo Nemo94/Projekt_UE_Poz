@@ -44,6 +44,7 @@
 #include "stm32f4_discovery_accelerometer.h"
 #include "mems.h"
 #include "magnetometr.h"
+#include "stepper_driver.h"
 #include <stdio.h>
 
 typedef enum HMC5883_SCALE_t HMC5883_SCALE_t;
@@ -74,6 +75,11 @@ extern void HMC5883_Stop_Calibration(void);
 void SetMagnetometerScaleValue(HMC5883_SCALE_t scale);
 extern void USART3_Init(void);
 extern void send_char(char c);
+
+extern void AllSteppersInit(uint8_t number_of_steppers);
+extern void StepperXEnable(uint8_t stepper_id);
+extern void StepperXDisable(uint8_t stepper_id);
+extern void StepperXExecute(uint8_t stepper_id, uint16_t steps, uint8_t direction);
 
 #endif /* __MAIN_H */
 
