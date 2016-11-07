@@ -1,19 +1,15 @@
 /* Includes ------------------------------------------------------------------*/
 #include "pwm.h"
 
-    /**TIM2 GPIO Configuration    
-    PA1     ------> TIM2_CH2
-    PA2     ------> TIM2_CH3
-    PA3     ------> TIM2_CH4 
-    */
+  //  PA1     ------> TIM2_CH2
+  //  PA2     ------> TIM2_CH3
+ //   PA3     ------> TIM2_CH4 
 
 TIM_HandleTypeDef PWMHandle;
-//uint32_t uwPrescalerValue = 0;
 
 void TIM2_Init(void)
 {
 	
-	//uwPrescalerValue = (uint32_t) ((SystemCoreClock /2) / 10000) - 1;
   TIM_MasterConfigTypeDef sMasterConfig;
   TIM_OC_InitTypeDef sConfigOC;
 	GPIO_InitTypeDef GPIO_InitStruct;
@@ -44,7 +40,6 @@ void TIM2_Init(void)
     GPIO_InitStruct.Alternate = GPIO_AF1_TIM2;
     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
   
-	//od 336 do 672
 	sConfigOC.OCMode = TIM_OCMODE_PWM1;
   sConfigOC.Pulse = 336;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
