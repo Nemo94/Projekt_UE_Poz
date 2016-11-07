@@ -1,4 +1,4 @@
-/* Define to prevent recursive inclusion -------------------------------------*/
+// COPYRIGHT 2016 MICHAL POTEMSKI  
 #ifndef __STEPPER_DRIVER_H
 #define __STEPPER_DRIVER_H
 

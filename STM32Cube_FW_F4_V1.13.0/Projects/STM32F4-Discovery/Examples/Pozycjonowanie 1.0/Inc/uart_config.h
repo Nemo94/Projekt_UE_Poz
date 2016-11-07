@@ -1,4 +1,4 @@
-/* Define to prevent recursive inclusion -------------------------------------*/
+// COPYRIGHT 2016 MICHAL POTEMSKI  
 #ifndef __UART_CONFIG_H
 #define __UART_CONFIG_H
 

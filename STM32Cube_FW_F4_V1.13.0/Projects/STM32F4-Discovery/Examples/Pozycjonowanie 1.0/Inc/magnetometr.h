@@ -1,4 +1,5 @@
-/* Define to prevent recursive inclusion -------------------------------------*/
+// COPYRIGHT 2016 MICHAL POTEMSKI  
+
 #ifndef __MAGNETOMETR_H
 #define __MAGNETOMETR_H
 

@@ -1,4 +1,8 @@
-   // PB11     ------> USART3_RX
+// COPYRIGHT 2016 MICHAL POTEMSKI  
+
+
+
+// PB11     ------> USART3_RX
   //  PD8     ------> USART3_TX 
 
 #include "main.h"

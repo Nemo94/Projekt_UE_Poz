@@ -1,3 +1,6 @@
+// COPYRIGHT 2016 MICHAL POTEMSKI  
+
+
 //PB6     ------> I2C1_SCL
 //PB9     ------> I2C1_SDA 
 

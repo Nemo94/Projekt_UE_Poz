@@ -1,5 +1,4 @@
-
-/* Includes ------------------------------------------------------------------*/
+// COPYRIGHT 2016 MICHAL POTEMSKI  
 #include "stepper_driver.h"
 
 

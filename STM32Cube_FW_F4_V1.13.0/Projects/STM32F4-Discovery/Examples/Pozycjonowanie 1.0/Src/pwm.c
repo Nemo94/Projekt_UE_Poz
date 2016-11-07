@@ -1,4 +1,5 @@
-/* Includes ------------------------------------------------------------------*/
+// COPYRIGHT 2016 MICHAL POTEMSKI  
+
 #include "pwm.h"
 
   //  PA1     ------> TIM2_CH2

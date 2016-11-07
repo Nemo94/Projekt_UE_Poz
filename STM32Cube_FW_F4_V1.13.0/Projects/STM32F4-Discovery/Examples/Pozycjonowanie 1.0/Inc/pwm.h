@@ -1,3 +1,6 @@
+// COPYRIGHT 2016 MICHAL POTEMSKI  
+
+
 #ifndef __pwm_H
 #define __pwm_H
 
