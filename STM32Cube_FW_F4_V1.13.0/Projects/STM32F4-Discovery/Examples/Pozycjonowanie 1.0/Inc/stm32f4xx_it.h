@@ -62,6 +62,7 @@ void SysTick_Handler(void);
 void EXTI0_IRQHandler(void);
 void EXTI1_IRQHandler(void);
 extern UART_HandleTypeDef Usart3Handle;
+extern TIM_HandleTypeDef PWMHandle;
 #ifdef __cplusplus
 }
 #endif

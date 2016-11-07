@@ -45,6 +45,7 @@ stm32f4-discovery\stm32f4_discovery_accelerometer.o: ..\Inc\magnetometr.h
 stm32f4-discovery\stm32f4_discovery_accelerometer.o: ..\Inc\main.h
 stm32f4-discovery\stm32f4_discovery_accelerometer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 stm32f4-discovery\stm32f4_discovery_accelerometer.o: ..\Inc\stepper_driver.h
+stm32f4-discovery\stm32f4_discovery_accelerometer.o: ..\Inc\pwm.h
 stm32f4-discovery\stm32f4_discovery_accelerometer.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\../Components/lis302dl/lis302dl.h
 stm32f4-discovery\stm32f4_discovery_accelerometer.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\../Components/lis302dl/../Common/accelero.h
 stm32f4-discovery\stm32f4_discovery_accelerometer.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\../Components/lis3dsh/lis3dsh.h

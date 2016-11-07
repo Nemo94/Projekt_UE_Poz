@@ -48,9 +48,15 @@ Do konwertera UART - USB
 
 Sterowniki silnikow krokowych:
 
-PE4, PE7, PE10, PE13 - EN
+PE4, PE7 - EN
 
-PE5, PE8, PE11, PE14 - DIR
+PE5, PE8 - DIR
 
-PE6, PE9, PE12, PE15 - STEP
+PE6, PE9 - STEP
+
+PWM dla serw:
+
+PA1 (Serwo1), PA2 (Serwo2), PA3 (Serwo3).
+
+Sterowanie serwami od 0 stopni do 168 stopni co 0.5 stopnia. 
 

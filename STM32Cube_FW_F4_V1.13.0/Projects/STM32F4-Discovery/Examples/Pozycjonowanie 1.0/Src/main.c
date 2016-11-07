@@ -77,6 +77,7 @@ int main(void)
 	}
 	
 	USART3_Init();
+	TIM2_Init();
 	
   BSP_LED_Off(LED3);
   BSP_LED_Off(LED4);
@@ -102,33 +103,31 @@ int main(void)
 		printf("kat_od_polnocy=%u\n", kat_od_polnocy);
 		HAL_Delay(5000);
 		
-		
-
-		
-		
 		//wlacz uklady sterujace silnikami
 		StepperXEnable(MOTOR1);
 		StepperXEnable(MOTOR2);
-		StepperXEnable(MOTOR3);
-		StepperXEnable(MOTOR4);
 		
 		//wykonuja odpowiednia ilosc krokow w pierwszym kierunku
 		StepperXExecute(MOTOR1, 10, 0);
 		StepperXExecute(MOTOR2, 20, 0);
-		StepperXExecute(MOTOR3, 50, 0);
-		StepperXExecute(MOTOR4, 100, 0);
 		
 		//wykonuja taka sama liczbe krokow w odwrotnym kierunku, powracajac do poczatkowego polozenia
 		StepperXExecute(MOTOR1, 10, 1);
 		StepperXExecute(MOTOR2, 20, 1);
-		StepperXExecute(MOTOR3, 50, 1);
-		StepperXExecute(MOTOR4, 100, 1);
 		
 		//wylacz uklady sterujace silnikami
 		StepperXDisable(MOTOR1);
 		StepperXDisable(MOTOR2);
-		StepperXDisable(MOTOR3);
-		StepperXDisable(MOTOR4);
+		
+		
+		//wartosci dla serw moga byc przyjmowane w katach od 0.0 do 168.0 co 0.5 
+		ServoSetAngle(SERVO1, 20.5);
+		ServoSetAngle(SERVO2, 40.0);
+		ServoSetAngle(SERVO3, 60.5);
+		
+		ServoSetAngle(SERVO1, 0.0);
+		ServoSetAngle(SERVO2, 0.0);
+		ServoSetAngle(SERVO3, 0.0);
 		
 		HAL_Delay(5000);
 

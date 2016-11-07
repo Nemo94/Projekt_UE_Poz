@@ -12,6 +12,7 @@
 #include "mems.h"
 #include "magnetometr.h"
 #include "stepper_driver.h"
+#include "pwm.h"
 #include <stdio.h>
 
 typedef enum HMC5883_SCALE_t HMC5883_SCALE_t;
@@ -47,6 +48,8 @@ extern void AllSteppersInit(uint8_t number_of_steppers);
 extern void StepperXEnable(uint8_t stepper_id);
 extern void StepperXDisable(uint8_t stepper_id);
 extern void StepperXExecute(uint8_t stepper_id, uint16_t steps, uint8_t direction);
+extern void TIM2_Init(void);
+extern void ServoSetAngle(uint8_t servo_id, float angle);
 
 #endif /* __MAIN_H */
 

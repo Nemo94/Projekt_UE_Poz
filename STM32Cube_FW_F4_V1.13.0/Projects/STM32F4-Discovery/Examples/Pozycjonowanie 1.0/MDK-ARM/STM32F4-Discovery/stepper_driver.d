@@ -47,3 +47,4 @@ stm32f4-discovery\stepper_driver.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery
 stm32f4-discovery\stepper_driver.o: ..\Inc\magnetometr.h
 stm32f4-discovery\stepper_driver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 stm32f4-discovery\stepper_driver.o: ..\Inc\stepper_driver.h
+stm32f4-discovery\stepper_driver.o: ..\Inc\pwm.h

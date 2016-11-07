@@ -46,4 +46,5 @@ stm32f4-discovery\uart_config.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\..
 stm32f4-discovery\uart_config.o: ..\Inc\magnetometr.h
 stm32f4-discovery\uart_config.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 stm32f4-discovery\uart_config.o: ..\Inc\stepper_driver.h
+stm32f4-discovery\uart_config.o: ..\Inc\pwm.h
 stm32f4-discovery\uart_config.o: ..\Inc\uart_config.h

@@ -47,3 +47,4 @@ stm32f4-discovery\mems.o: ..\Inc\magnetometr.h
 stm32f4-discovery\mems.o: ..\Inc\main.h
 stm32f4-discovery\mems.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 stm32f4-discovery\mems.o: ..\Inc\stepper_driver.h
+stm32f4-discovery\mems.o: ..\Inc\pwm.h
