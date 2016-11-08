@@ -104,7 +104,7 @@ void ServoSetAngle(uint8_t servo_id, float angle)
 	
 	TIM_OC_InitTypeDef ConfigStruct;
 	ConfigStruct.OCMode = TIM_OCMODE_PWM1;
-	ConfigStruct.Pulse = (uint32_t)(2*angle);
+	ConfigStruct.Pulse = (uint32_t)(336+2*angle);
 	ConfigStruct.OCPolarity = TIM_OCPOLARITY_HIGH;
   ConfigStruct.OCFastMode = TIM_OCFAST_DISABLE;
 	
