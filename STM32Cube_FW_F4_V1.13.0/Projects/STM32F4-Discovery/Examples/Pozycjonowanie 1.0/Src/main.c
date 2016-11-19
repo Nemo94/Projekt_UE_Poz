@@ -1,5 +1,6 @@
 /**
   *COPYRIGHT(c) 2016 STMicroelectronics
+	Modified 2016 Michal Potemski
   ******************************************************************************
   */
 
@@ -50,20 +51,12 @@ int main(void)
   /* Configure the system clock to 168 MHz */
   SystemClock_Config();
   
-  /* Configure USER Button */
   BSP_PB_Init(BUTTON_KEY, BUTTON_MODE_EXTI);
   
 	
-	
-	 /* Inicjalizacja MEMS */
-  if(BSP_ACCELERO_Init() != HAL_OK)
-  {
-    /* Initialization Error */
-    Error_Handler(); 
-  }
-	
-	//inicjalizuj I2C do magnetometru, a potem jego oraz go wyskaluj
-	
+	LIS3DH_Line_Init();
+	LIS3DH_Config();
+		
 	I2C1_Init();
 	
 	uint8_t magnetometer_is_working = 0;
@@ -214,11 +207,6 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
     //while (BSP_PB_GetState(BUTTON_KEY) != RESET);
   }
   
-  if(AKCELERO_INT2_PIN == GPIO_Pin) 
-  {
-    /* Clear MEMS click interruption */
-    BSP_ACCELERO_Click_ITClear();
-  }
 }
 
 
@@ -291,12 +279,5 @@ void assert_failed(uint8_t* file, uint32_t line)
 }
 #endif
 
-/**
-  * @}
-  */
 
-/**
-  * @}
-  */
 
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

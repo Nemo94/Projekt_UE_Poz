@@ -38,12 +38,9 @@ stm32f4-discovery\magnetometr.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc
 stm32f4-discovery\magnetometr.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h
 stm32f4-discovery\magnetometr.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h
 stm32f4-discovery\magnetometr.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_usart.h
-stm32f4-discovery\magnetometr.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\stm32f4_discovery_accelerometer.h
-stm32f4-discovery\magnetometr.o: ..\Inc\mems.h
+stm32f4-discovery\magnetometr.o: ..\Inc\lis3dh_driver.h
 stm32f4-discovery\magnetometr.o: ..\Inc\main.h
-stm32f4-discovery\magnetometr.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\../Components/lis302dl/lis302dl.h
-stm32f4-discovery\magnetometr.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\../Components/lis302dl/../Common/accelero.h
-stm32f4-discovery\magnetometr.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\../Components/lis3dsh/lis3dsh.h
+stm32f4-discovery\magnetometr.o: ..\Inc\mems.h
 stm32f4-discovery\magnetometr.o: ..\Inc\magnetometr.h
 stm32f4-discovery\magnetometr.o: ..\Inc\stepper_driver.h
 stm32f4-discovery\magnetometr.o: ..\Inc\pwm.h

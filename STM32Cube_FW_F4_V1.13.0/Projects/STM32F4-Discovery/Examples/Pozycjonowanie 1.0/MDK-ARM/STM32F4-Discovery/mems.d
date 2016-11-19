@@ -38,13 +38,10 @@ stm32f4-discovery\mems.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f
 stm32f4-discovery\mems.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h
 stm32f4-discovery\mems.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h
 stm32f4-discovery\mems.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_usart.h
-stm32f4-discovery\mems.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\stm32f4_discovery_accelerometer.h
-stm32f4-discovery\mems.o: ..\Inc\mems.h
-stm32f4-discovery\mems.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\../Components/lis302dl/lis302dl.h
-stm32f4-discovery\mems.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\../Components/lis302dl/../Common/accelero.h
-stm32f4-discovery\mems.o: ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\../Components/lis3dsh/lis3dsh.h
-stm32f4-discovery\mems.o: ..\Inc\magnetometr.h
+stm32f4-discovery\mems.o: ..\Inc\lis3dh_driver.h
 stm32f4-discovery\mems.o: ..\Inc\main.h
+stm32f4-discovery\mems.o: ..\Inc\mems.h
+stm32f4-discovery\mems.o: ..\Inc\magnetometr.h
 stm32f4-discovery\mems.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 stm32f4-discovery\mems.o: ..\Inc\stepper_driver.h
 stm32f4-discovery\mems.o: ..\Inc\pwm.h
