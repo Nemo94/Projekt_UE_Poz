@@ -104,7 +104,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *UartHandle)
 		{
 			for(uint8_t i=0; i<bufor; i++)
 			{
-				command=RxBuffer[1]*10+RxBuffer[1];
+				command=RxBuffer[0]*10+RxBuffer[1];
 			}
 		}
 	if(bufor>2) 
