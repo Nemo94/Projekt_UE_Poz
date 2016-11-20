@@ -11,6 +11,6 @@
 void USART3_Init(void);
 void send_char(char c);
 UART_HandleTypeDef Usart3Handle;
-
+uint8_t command;
 
 #endif

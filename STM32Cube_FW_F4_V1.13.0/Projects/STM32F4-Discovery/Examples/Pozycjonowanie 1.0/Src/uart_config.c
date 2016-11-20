@@ -3,12 +3,16 @@
 
 
 // PB11     ------> USART3_RX
-  //  PD8     ------> USART3_TX 
+//  PD8     ------> USART3_TX 
 
 #include "main.h"
 #include "uart_config.h"
 		
 UART_HandleTypeDef Usart3Handle;
+uint8_t RxBuffer[2];
+uint8_t RxData;
+volatile uint8_t bufor=0;
+uint8_t command=0;
 
 void USART3_Init(void)
 {
@@ -25,7 +29,8 @@ void USART3_Init(void)
   {
     Error_Handler();
   }
-
+	
+	HAL_UART_Receive_IT(&Usart3Handle, (uint8_t*)&RxData, 1); 
 }
 
 void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
@@ -77,10 +82,47 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 void send_char(char c)
 {
 	uint8_t aTxBuffer=(uint8_t)c;
-	HAL_UART_Transmit(&Usart3Handle, (uint8_t*)&aTxBuffer, 1, 5000); 
+	HAL_UART_Transmit_IT(&Usart3Handle, (uint8_t*)&aTxBuffer, 1); 
 }
 
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *UartHandle)
 {
 		__HAL_UART_FLUSH_DRREGISTER(&Usart3Handle);
 }
+
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *UartHandle)
+{
+	if((RxData>=0 && RxData<10) || RxData == '\r' || RxData == '\n')
+	{
+		if(RxData!='\r' && RxData!='\n')
+		{
+			RxBuffer[bufor] = RxData;
+			bufor++;
+		}
+		else 
+		{
+			for(uint8_t i=0; i<bufor; i++)
+			{
+				command=RxBuffer[1]*10+RxBuffer[1];
+			}
+		}
+	if(bufor>2) 
+	{
+		bufor=0;
+		RxBuffer[1]=0;
+		RxBuffer[0]=0;
+	}	
+		HAL_UART_Receive_IT(&Usart3Handle, (uint8_t*)&RxData, 1); 
+		__HAL_UART_FLUSH_DRREGISTER(&Usart3Handle);
+	}
+}
+
+void HAL_UART_ErrorCallback(UART_HandleTypeDef *UartHandle)
+{
+	bufor=0;
+	RxBuffer[1]=0;
+	RxBuffer[0]=0;
+	HAL_UART_Receive_IT(&Usart3Handle, (uint8_t*) &RxData, 1);
+}
+

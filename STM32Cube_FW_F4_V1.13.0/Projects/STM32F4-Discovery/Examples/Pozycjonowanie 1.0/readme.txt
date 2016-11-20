@@ -6,6 +6,7 @@ Co zostalo zrobione:
  - napisalem sterownik, ktory steruje 2 ukladami DRV8825 StepStick i tym samym 2 silnikami krokowymi - obsluga wlaczenia, wylaczenia, kierunku i zadania liczby krokow
  - 3x PWM o f=50 Hz, regulacja od D=5% (0 stopni kat wychylenia) do 10% (168 stopni kat wychylenia) trzech serw.
  - niedzialajacy driver do LIS3DsH zostal usuniety i zostal zrobiony od nowa  z wykorztaniem elementow drivera znalezionych na stronie sTM, akcelerometr nie generuje juz przerwan
+ - obsluga wprowadzenia komend w postaci dwucyfrowych ciagow z konsoli
 
 Nastepne kroki do zrobienia w projekcie:
 - sprawdzenie obslugi zewnetrznego akceleroemetru pod SPI w nowej wersji drivera?

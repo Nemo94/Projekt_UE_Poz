@@ -177,10 +177,9 @@ void EXTI0_IRQHandler(void)
   HAL_GPIO_EXTI_IRQHandler(KEY_BUTTON_PIN);
 }
 
-void UART5_IRQHandler(void)
+void USART3_IRQHandler(void)
 {
 	  HAL_UART_IRQHandler(&Usart3Handle);
-
 }
 
 void TIM2_IRQHandler(void)

@@ -27,6 +27,7 @@ enum HMC5883_SCALE_t{
   HMC5883_8G1       // +/- 8,1 Gauss
 };
 
+extern uint8_t command;
 
 /* Exported types ------------------------------------------------------------*/
 

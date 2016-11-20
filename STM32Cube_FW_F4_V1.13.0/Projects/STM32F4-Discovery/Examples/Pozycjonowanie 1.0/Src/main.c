@@ -70,6 +70,7 @@ int main(void)
 	}
 	
 	USART3_Init();
+	
 	TIM2_Init();
 	
   BSP_LED_Off(LED3);
@@ -82,8 +83,8 @@ int main(void)
   while(1)
   {
 
-			ReadAccelero();
-			HMC5883_Read();
+		ReadAccelero();
+		HMC5883_Read();
 		//tu znajduja sie aktualizowane w powyzszych funkcjach dane z akcelerometru i kompasu
 		//akcelero_x
 		//akcelero_y
@@ -94,6 +95,8 @@ int main(void)
 		printf("akcelero_y=%u\n", akcelero_y);
 		printf("akcelero_z=%u\n", akcelero_z);
 		printf("kat_od_polnocy=%u\n", kat_od_polnocy);
+		//zmienna command przechowuje komende wydana z konsoli - mozna wykorzystac do wyboru numeru zestawu koordynatow do ustawienia - aktualnie brak implementacji obslugi wprowadzenia dowolnych koordynatow z konsoli
+		printf("komenda wydana z konsoli = %u\n", command);
 		HAL_Delay(5000);
 		
 		//wlacz uklady sterujace silnikami
@@ -118,17 +121,23 @@ int main(void)
 		ServoSetAngle(SERVO2, 40.0);
 		ServoSetAngle(SERVO3, 60.5);
 		
+		HAL_Delay(3000);
+		
 		ServoSetAngle(SERVO1, 0.0);
 		ServoSetAngle(SERVO2, 0.0);
 		ServoSetAngle(SERVO3, 0.0);
 		
-		HAL_Delay(5000);
+		HAL_Delay(3000);
 
   }
 }
 
 int __io_putchar(int c)
 {
+    if (c=='\n')
+		{			
+        send_char('\r');
+		}
     send_char(c);
     return c;
 }
