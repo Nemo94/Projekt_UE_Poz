@@ -27,9 +27,9 @@
 #define AKCELERO_CS_GPIO_CLK_DISABLE()         __GPIOD_CLK_DISABLE()
 
 
-extern uint16_t akcelero_x;
-extern uint16_t akcelero_y;
-extern uint16_t akcelero_z;
+extern int16_t akcelero_x;
+extern int16_t akcelero_y;
+extern int16_t akcelero_z;
 
 /* Exported functions ------------------------------------------------------- */
 void ReadAccelero(void);

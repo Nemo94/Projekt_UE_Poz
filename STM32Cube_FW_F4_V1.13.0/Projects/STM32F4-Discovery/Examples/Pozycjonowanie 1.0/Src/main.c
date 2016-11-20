@@ -14,9 +14,9 @@
 
 
 //zmienne z aktualnymi danymi akcelerometru, do przetwarzania!
-uint16_t akcelero_x=0;
-uint16_t akcelero_y=0;
-uint16_t akcelero_z=0;
+int16_t akcelero_x=0;
+int16_t akcelero_y=0;
+int16_t akcelero_z=0;
 
 
 //aktualny kat w stopniach od polnocy 0-359, do przetwarzania dalej!
@@ -91,9 +91,9 @@ int main(void)
 		//akcelero_z
 		//kat_od_polnocy
 		
-		printf("akcelero_x=%u\n", akcelero_x);
-		printf("akcelero_y=%u\n", akcelero_y);
-		printf("akcelero_z=%u\n", akcelero_z);
+		printf("akcelero_x=%d\n", akcelero_x);
+		printf("akcelero_y=%d\n", akcelero_y);
+		printf("akcelero_z=%d\n", akcelero_z);
 		printf("kat_od_polnocy=%u\n", kat_od_polnocy);
 		//zmienna command przechowuje komende wydana z konsoli - mozna wykorzystac do wyboru numeru zestawu koordynatow do ustawienia - aktualnie brak implementacji obslugi wprowadzenia dowolnych koordynatow z konsoli
 		printf("komenda wydana z konsoli = %u\n", command);
