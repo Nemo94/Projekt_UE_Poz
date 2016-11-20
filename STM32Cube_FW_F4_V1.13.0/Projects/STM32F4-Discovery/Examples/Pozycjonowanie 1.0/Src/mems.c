@@ -179,6 +179,7 @@ void ReadAccelero(void)
 	AxesRaw_t akcelero_data;
   int16_t xval, yval= 0x00;
   
+	LIS3DH_Config();
   LIS3DH_GetAccAxesRaw(&akcelero_data);
   
   akcelero_x = akcelero_data.AXIS_X;

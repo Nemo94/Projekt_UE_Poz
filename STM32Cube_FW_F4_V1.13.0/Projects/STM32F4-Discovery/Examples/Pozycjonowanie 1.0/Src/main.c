@@ -18,6 +18,7 @@ int16_t akcelero_x=0;
 int16_t akcelero_y=0;
 int16_t akcelero_z=0;
 
+char string[30];
 
 //aktualny kat w stopniach od polnocy 0-359, do przetwarzania dalej!
 uint16_t kat_od_polnocy=0;
@@ -82,7 +83,8 @@ int main(void)
 	
   while(1)
   {
-
+	//w read accelero nie wiem czy pomogla funkcja LIS3DH_Config(), watpie, jesli nie, mozna ja stamtad usunac.
+		//nie wiem czemu tylko jeden raz sie dane pobieraja z akceleroemtru jesli to jest w while...
 		ReadAccelero();
 		HMC5883_Read();
 		//tu znajduja sie aktualizowane w powyzszych funkcjach dane z akcelerometru i kompasu
@@ -91,12 +93,17 @@ int main(void)
 		//akcelero_z
 		//kat_od_polnocy
 		
-		printf("akcelero_x=%d\n", akcelero_x);
-		printf("akcelero_y=%d\n", akcelero_y);
-		printf("akcelero_z=%d\n", akcelero_z);
-		printf("kat_od_polnocy=%u\n", kat_od_polnocy);
+		sprintf(string, "akcelero_x=%d\n", akcelero_x);
+		send_string(string);
+		sprintf(string, "akcelero_y=%d\n", akcelero_y);
+		send_string(string);
+		sprintf(string, "akcelero_z=%d\n", akcelero_z);
+		send_string(string);
+		sprintf(string, "kat_od_polnocy=%u\n", kat_od_polnocy);
+		send_string(string);
 		//zmienna command przechowuje komende wydana z konsoli - mozna wykorzystac do wyboru numeru zestawu koordynatow do ustawienia - aktualnie brak implementacji obslugi wprowadzenia dowolnych koordynatow z konsoli
-		printf("komenda wydana z konsoli = %u\n", command);
+		sprintf(string, "komenda wydana z konsoli = %u\n", command);
+		send_string(string);
 		HAL_Delay(5000);
 		
 		//wlacz uklady sterujace silnikami
@@ -132,15 +139,6 @@ int main(void)
   }
 }
 
-int __io_putchar(int c)
-{
-    if (c=='\n')
-		{			
-        send_char('\r');
-		}
-    send_char(c);
-    return c;
-}
 
 
 /**

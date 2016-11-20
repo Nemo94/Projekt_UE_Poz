@@ -8,11 +8,14 @@
 #include "main.h"
 #include "uart_config.h"
 		
+		
 UART_HandleTypeDef Usart3Handle;
 uint8_t RxBuffer[2];
 uint8_t RxData;
 volatile uint8_t bufor=0;
 uint8_t command=0;
+__IO ITStatus UartReady = RESET;
+uint8_t aTxBuffer[30];
 
 void USART3_Init(void)
 {
@@ -79,15 +82,23 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
   }
 } 
 
-void send_char(char c)
+void send_string(char* string)
 {
-	uint8_t aTxBuffer=(uint8_t)c;
-	HAL_UART_Transmit_IT(&Usart3Handle, (uint8_t*)&aTxBuffer, 1); 
+	for(uint8_t i=0; i<30; i++)
+	{
+		aTxBuffer[i]=(uint8_t)string[i];
+	}
+	HAL_UART_Transmit_IT(&Usart3Handle, (uint8_t*)&aTxBuffer, 30);
+	while (UartReady != SET)
+  {
+		;
+  }
+  UartReady = RESET;
 }
 
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *UartHandle)
 {
-		__HAL_UART_FLUSH_DRREGISTER(&Usart3Handle);
+	UartReady = SET;
 }
 
 

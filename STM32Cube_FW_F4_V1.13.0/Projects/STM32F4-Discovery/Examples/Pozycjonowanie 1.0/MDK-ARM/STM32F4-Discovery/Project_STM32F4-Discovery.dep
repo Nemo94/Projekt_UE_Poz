@@ -685,8 +685,8 @@ I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x577
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x57714004)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_usart.h)(0x57714004)
 F (..\readme.txt)(0x5830FE50)()
-F (..\Src\main.c)(0x58317124)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\Inc -I ..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include -I ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc -I ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery --C99-I "C:\projekt_UE\Projekt_UE_Poz\STM32Cube_FW_F4_V1.13.0\Projects\STM32F4-Discovery\Examples\Pozycjonowanie 1.0\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.8.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_STM32F4_DISCO-o stm32f4-discovery\main.o --omf_browse stm32f4-discovery\main.crf --depend stm32f4-discovery\main.d)
-I (..\Inc\main.h)(0x583170D9)
+F (..\Src\main.c)(0x583188A5)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\Inc -I ..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include -I ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc -I ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery --C99-I "C:\projekt_UE\Projekt_UE_Poz\STM32Cube_FW_F4_V1.13.0\Projects\STM32F4-Discovery\Examples\Pozycjonowanie 1.0\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.8.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_STM32F4_DISCO-o stm32f4-discovery\main.o --omf_browse stm32f4-discovery\main.crf --depend stm32f4-discovery\main.d)
+I (..\Inc\main.h)(0x5831856C)
 I (..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\stm32f4_discovery.h)(0x581C8654)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x57714004)
 I (..\Inc\stm32f4xx_hal_conf.h)(0x581D5205)
@@ -729,9 +729,9 @@ I (..\Inc\magnetometr.h)(0x58210979)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x56FE9736)
 I (..\Inc\stepper_driver.h)(0x5821092E)
 I (..\Inc\pwm.h)(0x5821095A)
-F (..\Src\mems.c)(0x58317098)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\Inc -I ..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include -I ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc -I ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery --C99-I "C:\projekt_UE\Projekt_UE_Poz\STM32Cube_FW_F4_V1.13.0\Projects\STM32F4-Discovery\Examples\Pozycjonowanie 1.0\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.8.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_STM32F4_DISCO-o stm32f4-discovery\mems.o --omf_browse stm32f4-discovery\mems.crf --depend stm32f4-discovery\mems.d)
+F (..\Src\mems.c)(0x583187BD)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\Inc -I ..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include -I ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc -I ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery --C99-I "C:\projekt_UE\Projekt_UE_Poz\STM32Cube_FW_F4_V1.13.0\Projects\STM32F4-Discovery\Examples\Pozycjonowanie 1.0\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.8.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_STM32F4_DISCO-o stm32f4-discovery\mems.o --omf_browse stm32f4-discovery\mems.crf --depend stm32f4-discovery\mems.d)
 I (..\Inc\mems.h)(0x5831708B)
-I (..\Inc\main.h)(0x583170D9)
+I (..\Inc\main.h)(0x5831856C)
 I (..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\stm32f4_discovery.h)(0x581C8654)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x57714004)
 I (..\Inc\stm32f4xx_hal_conf.h)(0x581D5205)
@@ -774,7 +774,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x56FE9736)
 I (..\Inc\stepper_driver.h)(0x5821092E)
 I (..\Inc\pwm.h)(0x5821095A)
 F (..\Src\stm32f4xx_it.c)(0x5830F515)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\Inc -I ..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include -I ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc -I ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery --C99-I "C:\projekt_UE\Projekt_UE_Poz\STM32Cube_FW_F4_V1.13.0\Projects\STM32F4-Discovery\Examples\Pozycjonowanie 1.0\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.8.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_STM32F4_DISCO-o stm32f4-discovery\stm32f4xx_it.o --omf_browse stm32f4-discovery\stm32f4xx_it.crf --depend stm32f4-discovery\stm32f4xx_it.d)
-I (..\Inc\main.h)(0x583170D9)
+I (..\Inc\main.h)(0x5831856C)
 I (..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\stm32f4_discovery.h)(0x581C8654)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x57714004)
 I (..\Inc\stm32f4xx_hal_conf.h)(0x581D5205)
@@ -820,7 +820,7 @@ I (..\Inc\pwm.h)(0x5821095A)
 I (..\Inc\stm32f4xx_it.h)(0x5820B998)
 F (..\Src\magnetometr.c)(0x5821096B)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\Inc -I ..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include -I ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc -I ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery --C99-I "C:\projekt_UE\Projekt_UE_Poz\STM32Cube_FW_F4_V1.13.0\Projects\STM32F4-Discovery\Examples\Pozycjonowanie 1.0\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.8.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_STM32F4_DISCO-o stm32f4-discovery\magnetometr.o --omf_browse stm32f4-discovery\magnetometr.crf --depend stm32f4-discovery\magnetometr.d)
 I (..\Inc\magnetometr.h)(0x58210979)
-I (..\Inc\main.h)(0x583170D9)
+I (..\Inc\main.h)(0x5831856C)
 I (..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\stm32f4_discovery.h)(0x581C8654)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x57714004)
 I (..\Inc\stm32f4xx_hal_conf.h)(0x581D5205)
@@ -862,8 +862,8 @@ I (..\Inc\mems.h)(0x5831708B)
 I (..\Inc\stepper_driver.h)(0x5821092E)
 I (..\Inc\pwm.h)(0x5821095A)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x56FE9736)
-F (..\Src\uart_config.c)(0x58315C89)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\Inc -I ..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include -I ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc -I ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery --C99-I "C:\projekt_UE\Projekt_UE_Poz\STM32Cube_FW_F4_V1.13.0\Projects\STM32F4-Discovery\Examples\Pozycjonowanie 1.0\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.8.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_STM32F4_DISCO-o stm32f4-discovery\uart_config.o --omf_browse stm32f4-discovery\uart_config.crf --depend stm32f4-discovery\uart_config.d)
-I (..\Inc\main.h)(0x583170D9)
+F (..\Src\uart_config.c)(0x583186A6)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\Inc -I ..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include -I ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc -I ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery --C99-I "C:\projekt_UE\Projekt_UE_Poz\STM32Cube_FW_F4_V1.13.0\Projects\STM32F4-Discovery\Examples\Pozycjonowanie 1.0\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.8.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_STM32F4_DISCO-o stm32f4-discovery\uart_config.o --omf_browse stm32f4-discovery\uart_config.crf --depend stm32f4-discovery\uart_config.d)
+I (..\Inc\main.h)(0x5831856C)
 I (..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\stm32f4_discovery.h)(0x581C8654)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x57714004)
 I (..\Inc\stm32f4xx_hal_conf.h)(0x581D5205)
@@ -906,10 +906,10 @@ I (..\Inc\magnetometr.h)(0x58210979)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x56FE9736)
 I (..\Inc\stepper_driver.h)(0x5821092E)
 I (..\Inc\pwm.h)(0x5821095A)
-I (..\Inc\uart_config.h)(0x5830FC75)
+I (..\Inc\uart_config.h)(0x58318593)
 F (..\Src\stepper_driver.c)(0x58210923)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\Inc -I ..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include -I ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc -I ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery --C99-I "C:\projekt_UE\Projekt_UE_Poz\STM32Cube_FW_F4_V1.13.0\Projects\STM32F4-Discovery\Examples\Pozycjonowanie 1.0\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.8.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_STM32F4_DISCO-o stm32f4-discovery\stepper_driver.o --omf_browse stm32f4-discovery\stepper_driver.crf --depend stm32f4-discovery\stepper_driver.d)
 I (..\Inc\stepper_driver.h)(0x5821092E)
-I (..\Inc\main.h)(0x583170D9)
+I (..\Inc\main.h)(0x5831856C)
 I (..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\stm32f4_discovery.h)(0x581C8654)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x57714004)
 I (..\Inc\stm32f4xx_hal_conf.h)(0x581D5205)
@@ -953,7 +953,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x56FE9736)
 I (..\Inc\pwm.h)(0x5821095A)
 F (..\Src\pwm.c)(0x5830F259)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\Inc -I ..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include -I ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc -I ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery --C99-I "C:\projekt_UE\Projekt_UE_Poz\STM32Cube_FW_F4_V1.13.0\Projects\STM32F4-Discovery\Examples\Pozycjonowanie 1.0\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.8.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_STM32F4_DISCO-o stm32f4-discovery\pwm.o --omf_browse stm32f4-discovery\pwm.crf --depend stm32f4-discovery\pwm.d)
 I (..\Inc\pwm.h)(0x5821095A)
-I (..\Inc\main.h)(0x583170D9)
+I (..\Inc\main.h)(0x5831856C)
 I (..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\stm32f4_discovery.h)(0x581C8654)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x57714004)
 I (..\Inc\stm32f4xx_hal_conf.h)(0x581D5205)
@@ -997,7 +997,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x56FE9736)
 I (..\Inc\stepper_driver.h)(0x5821092E)
 F (..\Src\lis3dh_driver.c)(0x58307BCB)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\Inc -I ..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include -I ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc -I ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery --C99-I "C:\projekt_UE\Projekt_UE_Poz\STM32Cube_FW_F4_V1.13.0\Projects\STM32F4-Discovery\Examples\Pozycjonowanie 1.0\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.8.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_STM32F4_DISCO-o stm32f4-discovery\lis3dh_driver.o --omf_browse stm32f4-discovery\lis3dh_driver.crf --depend stm32f4-discovery\lis3dh_driver.d)
 I (..\Inc\lis3dh_driver.h)(0x5830785C)
-I (..\Inc\main.h)(0x583170D9)
+I (..\Inc\main.h)(0x5831856C)
 I (..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\stm32f4_discovery.h)(0x581C8654)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x57714004)
 I (..\Inc\stm32f4xx_hal_conf.h)(0x581D5205)

@@ -43,7 +43,7 @@ extern void HMC5883_Start_Calibration(void);
 extern void HMC5883_Stop_Calibration(void);
 void SetMagnetometerScaleValue(HMC5883_SCALE_t scale);
 extern void USART3_Init(void);
-extern void send_char(char c);
+extern void send_string(char* string);
 extern void LIS3DH_Line_Init(void);
 extern void LIS3DH_Config(void);
 
