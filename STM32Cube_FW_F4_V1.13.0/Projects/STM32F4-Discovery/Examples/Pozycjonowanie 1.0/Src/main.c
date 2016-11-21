@@ -83,8 +83,6 @@ int main(void)
 	
   while(1)
   {
-	//w read accelero nie wiem czy pomogla funkcja LIS3DH_Config(), watpie, jesli nie, mozna ja stamtad usunac.
-		//nie wiem czemu tylko jeden raz sie dane pobieraja z akceleroemtru jesli to jest w while...
 		ReadAccelero();
 		HMC5883_Read();
 		//tu znajduja sie aktualizowane w powyzszych funkcjach dane z akcelerometru i kompasu

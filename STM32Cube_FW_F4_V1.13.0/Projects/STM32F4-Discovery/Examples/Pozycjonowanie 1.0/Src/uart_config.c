@@ -15,7 +15,7 @@ uint8_t RxData;
 volatile uint8_t bufor=0;
 uint8_t command=0;
 __IO ITStatus UartReady = RESET;
-uint8_t aTxBuffer[30];
+uint8_t aTxBuffer[35];
 
 void USART3_Init(void)
 {
@@ -86,9 +86,18 @@ void send_string(char* string)
 {
 	for(uint8_t i=0; i<30; i++)
 	{
-		aTxBuffer[i]=(uint8_t)string[i];
+		uint8_t offset=0;
+		
+		if((uint8_t)string[i]=='\n') 
+		{
+				aTxBuffer[i+offset]='\r';
+				offset++;
+				aTxBuffer[i+offset]='\n';
+				i++;
+		}
+	aTxBuffer[i+offset]=(uint8_t)string[i];
 	}
-	HAL_UART_Transmit_IT(&Usart3Handle, (uint8_t*)&aTxBuffer, 30);
+	HAL_UART_Transmit_IT(&Usart3Handle, (uint8_t*)&aTxBuffer, 35);
 	while (UartReady != SET)
   {
 		;
