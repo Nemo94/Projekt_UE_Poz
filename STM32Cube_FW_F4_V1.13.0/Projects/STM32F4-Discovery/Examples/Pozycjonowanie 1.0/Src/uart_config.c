@@ -113,20 +113,16 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *UartHandle)
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *UartHandle)
 {
-	if((RxData>=0 && RxData<10) || RxData == '\r' || RxData == '\n')
-	{
+
 		if(RxData!='\r' && RxData!='\n')
 		{
 			RxBuffer[bufor] = RxData;
 			bufor++;
 		}
-		else 
-		{
 			for(uint8_t i=0; i<bufor; i++)
 			{
 				command=RxBuffer[0]*10+RxBuffer[1];
 			}
-		}
 	if(bufor>2) 
 	{
 		bufor=0;
@@ -135,7 +131,6 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *UartHandle)
 	}	
 		HAL_UART_Receive_IT(&Usart3Handle, (uint8_t*)&RxData, 1); 
 		__HAL_UART_FLUSH_DRREGISTER(&Usart3Handle);
-	}
 }
 
 void HAL_UART_ErrorCallback(UART_HandleTypeDef *UartHandle)
