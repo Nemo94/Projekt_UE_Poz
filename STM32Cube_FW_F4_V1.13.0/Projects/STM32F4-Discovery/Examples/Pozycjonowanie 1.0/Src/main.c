@@ -18,6 +18,10 @@ int16_t akcelero_x=0;
 int16_t akcelero_y=0;
 int16_t akcelero_z=0;
 
+//zmienne z aktualnymi danymi akcelerometru wyrazonymi w stopniach
+float roll = 0;
+float pitch = 0;
+
 char string[30];
 
 //aktualny kat w stopniach od polnocy 0-359, do przetwarzania dalej!
@@ -99,6 +103,11 @@ int main(void)
 		send_string(string);
 		sprintf(string, "kat_od_polnocy=%u\n", kat_od_polnocy);
 		send_string(string);
+	  
+	  	//dane z akcelerometru wyrazone w stopniach
+	  	roll = atan2( akcelero_x, akcelero_z ) * 180 / M_PI;
+	  	pitch = atan2( akcelero_y, akcelero_z ) * 180 / M_PI;
+	  
 		//zmienna command przechowuje komende wydana z konsoli - mozna wykorzystac do wyboru numeru zestawu koordynatow do ustawienia - aktualnie brak implementacji obslugi wprowadzenia dowolnych koordynatow z konsoli
 		sprintf(string, "komenda wydana z konsoli = %u\n", command);
 		send_string(string);
