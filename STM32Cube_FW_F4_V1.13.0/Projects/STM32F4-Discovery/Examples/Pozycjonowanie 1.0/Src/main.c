@@ -18,6 +18,10 @@ int16_t akcelero_x=0;
 int16_t akcelero_y=0;
 int16_t akcelero_z=0;
 
+//zmienne z aktualnymi danymi akcelerometru wyrazonymi w stopniach
+float roll = 0;
+float pitch = 0;
+
 char string[30];
 
 //aktualny kat w stopniach od polnocy 0-359, do przetwarzania dalej!
@@ -91,18 +95,32 @@ int main(void)
 		//akcelero_z
 		//kat_od_polnocy
 		
+		
+					//dane z akcelerometru wyrazone w stopniach
+	  	roll = atan2( akcelero_x, akcelero_z ) * 180 / M_PI;
+	  	pitch = atan2( akcelero_y, akcelero_z ) * 180 / M_PI;
+		
+		
 		sprintf(string, "akcelero_x=%d\n", akcelero_x);
 		send_string(string);
 		sprintf(string, "akcelero_y=%d\n", akcelero_y);
 		send_string(string);
 		sprintf(string, "akcelero_z=%d\n", akcelero_z);
 		send_string(string);
+		sprintf(string, "roll=%f\n",roll);
+		send_string(string);
+		sprintf(string, "pitch=%f\n", pitch);
+		send_string(string);
 		sprintf(string, "kat_od_polnocy=%u\n", kat_od_polnocy);
 		send_string(string);
+		
+		
+
+	  
+		
 		//zmienna command przechowuje komende wydana z konsoli - mozna wykorzystac do wyboru numeru zestawu koordynatow do ustawienia - aktualnie brak implementacji obslugi wprowadzenia dowolnych koordynatow z konsoli
 		sprintf(string, "komenda wydana z konsoli = %u\n", command);
 		send_string(string);
-		HAL_Delay(5000);
 		
 		//wlacz uklady sterujace silnikami
 		StepperXEnable(MOTOR1);
@@ -126,13 +144,11 @@ int main(void)
 		ServoSetAngle(SERVO2, 40.0);
 		ServoSetAngle(SERVO3, 60.5);
 		
-		HAL_Delay(3000);
 		
 		ServoSetAngle(SERVO1, 0.0);
 		ServoSetAngle(SERVO2, 0.0);
 		ServoSetAngle(SERVO3, 0.0);
 		
-		HAL_Delay(3000);
 
   }
 }

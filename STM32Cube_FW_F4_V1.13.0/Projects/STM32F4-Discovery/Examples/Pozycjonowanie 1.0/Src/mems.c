@@ -177,7 +177,6 @@ void LIS3DH_SPI_Read(uint8_t *pBuffer, uint8_t ReadAddr, uint16_t NumByteToRead)
 void ReadAccelero(void)
 {
 	AxesRaw_t akcelero_data;
-  int16_t xval, yval= 0x00;
   
 	LIS3DH_Config();
   LIS3DH_GetAccAxesRaw(&akcelero_data);
@@ -185,50 +184,6 @@ void ReadAccelero(void)
   akcelero_x = akcelero_data.AXIS_X;
   akcelero_y = akcelero_data.AXIS_Y;
 	akcelero_z = akcelero_data.AXIS_Z;
-  
-	xval = akcelero_x;
-	yval = akcelero_y;
-
-	
-  if((ABS(xval))>(ABS(yval)))
-  {
-    if(xval > ThresholdHigh)
-    { 
-      BSP_LED_On(LED5);
-      HAL_Delay(10);
-    }
-    else if(xval < ThresholdLow)
-    { 
-      BSP_LED_On(LED4);      
-      HAL_Delay(10);
-    }
-    else
-    { 
-      HAL_Delay(10);
-    }
-  }
-  else
-  {
-    if(yval < ThresholdLow)
-    {
-      BSP_LED_On(LED6);
-      HAL_Delay(10);
-    }
-    else if(yval > ThresholdHigh)
-    {
-      BSP_LED_On(LED3);
-      HAL_Delay(10);
-    } 
-    else
-    { 
-      HAL_Delay(10);
-    }
-  } 
-	  
-  BSP_LED_Off(LED3);
-  BSP_LED_Off(LED4);
-  BSP_LED_Off(LED5);
-  BSP_LED_Off(LED6);
 	
 }
 
