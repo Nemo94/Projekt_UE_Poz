@@ -113,11 +113,7 @@ int main(void)
 		send_string(string);
 		sprintf(string, "kat_od_polnocy=%u\n", kat_od_polnocy);
 		send_string(string);
-		
-		
 
-	  
-		
 		//zmienna command przechowuje komende wydana z konsoli - mozna wykorzystac do wyboru numeru zestawu koordynatow do ustawienia - aktualnie brak implementacji obslugi wprowadzenia dowolnych koordynatow z konsoli
 		sprintf(string, "komenda wydana z konsoli = %u\n", command);
 		send_string(string);
