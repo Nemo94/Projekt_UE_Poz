@@ -870,13 +870,13 @@ ARM Macro Assembler    Page 14
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
 erwork --depend=stm32f4-discovery\startup_stm32f407xx.d -ostm32f4-discovery\sta
-rtup_stm32f407xx.o -I"C:\projekt_UE\Projekt_UE_Poz\STM32Cube_FW_F4_V1.13.0\Proj
-ects\STM32F4-Discovery\Examples\Pozycjonowanie 1.0\MDK-ARM\RTE" -IC:\Keil_v5\AR
-M\PACK\ARM\CMSIS\5.0.0-Beta4\CMSIS\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx
-_DFP\2.8.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include --predefine="__MICROLIB SE
-TA 1" --predefine="__UVISION_VERSION SETA 520" --predefine="_RTE_ SETA 1" --pre
-define="STM32F407xx SETA 1" --list=startup_stm32f407xx.lst startup_stm32f407xx.
-s
+rtup_stm32f407xx.o -I"C:\Users\Piotrek\Documents\GitHub\Projekt_UE_Poz\STM32Cub
+e_FW_F4_V1.13.0\Projects\STM32F4-Discovery\Examples\Pozycjonowanie 1.0\MDK-ARM\
+RTE\_STM32F4-Discovery" -ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include -ID
+:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.10.0\Drivers\CMSIS\Device\ST\STM32F4xx\
+Include --predefine="__EVAL SETA 1" --predefine="__MICROLIB SETA 1" --predefine
+="__UVISION_VERSION SETA 522" --predefine="_RTE_ SETA 1" --predefine="STM32F407
+xx SETA 1" --list=startup_stm32f407xx.lst startup_stm32f407xx.s
 
 
 
@@ -1961,4 +1961,4 @@ Symbol: __main
       At line 192 in file startup_stm32f407xx.s
 Comment: __main used once
 2 symbols
-445 symbols in table
+446 symbols in table
