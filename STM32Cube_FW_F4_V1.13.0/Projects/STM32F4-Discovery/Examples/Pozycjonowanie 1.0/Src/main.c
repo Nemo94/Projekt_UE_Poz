@@ -19,8 +19,11 @@ int16_t akcelero_y=0;
 int16_t akcelero_z=0;
 
 //zmienne z aktualnymi danymi akcelerometru wyrazonymi w stopniach
-float roll = 0;
-float pitch = 0;
+float roll = 0;	//obrot wzgledem osi X
+float pitch = 0;	//obrot wzgledem osi Y
+
+//tolerancja bledu pomiaru akcelerometru
+float tolerancja_akcelero = 0.5f;
 
 char string[30];
 
@@ -96,9 +99,9 @@ int main(void)
 		//kat_od_polnocy
 		
 		
-					//dane z akcelerometru wyrazone w stopniach
-	  	roll = atan2( akcelero_x, akcelero_z ) * 180 / M_PI;
-	  	pitch = atan2( akcelero_y, akcelero_z ) * 180 / M_PI;
+		//dane z akcelerometru wyrazone w stopniach
+	  roll = atan2( akcelero_x, akcelero_z ) * 180 / M_PI;
+	  pitch = atan2( akcelero_y, akcelero_z ) * 180 / M_PI;
 		
 		
 		sprintf(string, "akcelero_x=%d\n", akcelero_x);
@@ -117,6 +120,33 @@ int main(void)
 		//zmienna command przechowuje komende wydana z konsoli - mozna wykorzystac do wyboru numeru zestawu koordynatow do ustawienia - aktualnie brak implementacji obslugi wprowadzenia dowolnych koordynatow z konsoli
 		sprintf(string, "komenda wydana z konsoli = %u\n", command);
 		send_string(string);
+		
+		//sterowanie silnikiem krokowym na podstawie danych z akcelerometru
+		if( ( roll < -tolerancja_akcelero ) | ( roll > tolerancja_akcelero ) )
+		{
+			//wlaczenie ukadu sterujacego silnikiem krokowym
+			StepperXEnable( MOTOR1 );
+			
+			//wykonanie odpowiedniej ilosci krokow
+			StepperXExecute( MOTOR1, roll, 0 );
+			
+			if( pitch < 0 )
+			{
+				//wykonanie obrotu o 180 stopni, aby kat pitch byl dodatni
+				StepperXExecute( MOTOR1, 180, 0 );
+			} else;
+			
+			//wylaczenie ukladu sterujacego silnikiem krokowym
+			StepperXDisable( MOTOR1 );
+		} else;
+		
+		//sterowanie serwomechanizmami (przy zalozeniu, ze sterujemy dwoma przy poziomowaniu) na podstawie danych z akcelerometru
+		if( ( pitch < -tolerancja_akcelero ) | ( pitch > tolerancja_akcelero ) )
+		{
+			//zadanie kata dla serwomechanizmow
+			ServoSetAngle( SERVO1, pitch );
+			ServoSetAngle( SERVO2, pitch );
+		} else;
 		
 		//wlacz uklady sterujace silnikami
 		StepperXEnable(MOTOR1);
