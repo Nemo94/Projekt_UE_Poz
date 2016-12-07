@@ -2127,16 +2127,16 @@ Image Symbol Table
     i.atan                                   0x080043f4   Section        0  atan.o(i.atan)
     i.fabs                                   0x08004404   Section        0  fabs.o(i.fabs)
     i.main                                   0x0800441c   Section        0  main.o(i.main)
-    i.p_HMC5883_calcData                     0x080047a4   Section        0  magnetometr.o(i.p_HMC5883_calcData)
-    i.send_string                            0x080048c4   Section        0  uart_config.o(i.send_string)
-    .constdata                               0x08004910   Section       16  stm32f4xx_hal_rcc.o(.constdata)
-    .constdata                               0x08004920   Section       12  stm32f4_discovery.o(.constdata)
-    .constdata                               0x08004930   Section      152  atan.o(.constdata)
-    atanhi                                   0x08004930   Data          32  atan.o(.constdata)
-    atanlo                                   0x08004950   Data          32  atan.o(.constdata)
-    aTodd                                    0x08004970   Data          40  atan.o(.constdata)
-    aTeven                                   0x08004998   Data          48  atan.o(.constdata)
-    .constdata                               0x080049c8   Section        8  qnan.o(.constdata)
+    i.p_HMC5883_calcData                     0x08004784   Section        0  magnetometr.o(i.p_HMC5883_calcData)
+    i.send_string                            0x080048a4   Section        0  uart_config.o(i.send_string)
+    .constdata                               0x080048f0   Section       16  stm32f4xx_hal_rcc.o(.constdata)
+    .constdata                               0x08004900   Section       12  stm32f4_discovery.o(.constdata)
+    .constdata                               0x08004910   Section      152  atan.o(.constdata)
+    atanhi                                   0x08004910   Data          32  atan.o(.constdata)
+    atanlo                                   0x08004930   Data          32  atan.o(.constdata)
+    aTodd                                    0x08004950   Data          40  atan.o(.constdata)
+    aTeven                                   0x08004978   Data          48  atan.o(.constdata)
+    .constdata                               0x080049a8   Section        8  qnan.o(.constdata)
     .data                                    0x20000000   Section        4  stm32f4xx_hal.o(.data)
     .data                                    0x20000004   Section       20  main.o(.data)
     .data                                    0x20000018   Section        4  mems.o(.data)
@@ -2442,16 +2442,16 @@ Image Symbol Table
     __scatterload_zeroinit                   0x08003b29   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
     atan                                     0x080043f5   Thumb Code    16  atan.o(i.atan)
     fabs                                     0x08004405   Thumb Code    24  fabs.o(i.fabs)
-    main                                     0x0800441d   Thumb Code   734  main.o(i.main)
-    p_HMC5883_calcData                       0x080047a5   Thumb Code   256  magnetometr.o(i.p_HMC5883_calcData)
-    send_string                              0x080048c5   Thumb Code    68  uart_config.o(i.send_string)
-    APBAHBPrescTable                         0x08004910   Data          16  stm32f4xx_hal_rcc.o(.constdata)
-    BUTTON_IRQn                              0x08004920   Data           1  stm32f4_discovery.o(.constdata)
-    BUTTON_PIN                               0x08004922   Data           2  stm32f4_discovery.o(.constdata)
-    GPIO_PIN                                 0x08004924   Data           8  stm32f4_discovery.o(.constdata)
-    __mathlib_zero                           0x080049c8   Data           8  qnan.o(.constdata)
-    Region$$Table$$Base                      0x080049d0   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x080049f0   Number         0  anon$$obj.o(Region$$Table)
+    main                                     0x0800441d   Thumb Code   702  main.o(i.main)
+    p_HMC5883_calcData                       0x08004785   Thumb Code   256  magnetometr.o(i.p_HMC5883_calcData)
+    send_string                              0x080048a5   Thumb Code    68  uart_config.o(i.send_string)
+    APBAHBPrescTable                         0x080048f0   Data          16  stm32f4xx_hal_rcc.o(.constdata)
+    BUTTON_IRQn                              0x08004900   Data           1  stm32f4_discovery.o(.constdata)
+    BUTTON_PIN                               0x08004902   Data           2  stm32f4_discovery.o(.constdata)
+    GPIO_PIN                                 0x08004904   Data           8  stm32f4_discovery.o(.constdata)
+    __mathlib_zero                           0x080049a8   Data           8  qnan.o(.constdata)
+    Region$$Table$$Base                      0x080049b0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080049d0   Number         0  anon$$obj.o(Region$$Table)
     uwTick                                   0x20000000   Data           4  stm32f4xx_hal.o(.data)
     akcelero_x                               0x20000004   Data           2  main.o(.data)
     akcelero_y                               0x20000006   Data           2  main.o(.data)
@@ -2488,9 +2488,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000189
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00004a44, Max: 0x00100000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00004a24, Max: 0x00100000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x000049f0, Max: 0x00100000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x000049d0, Max: 0x00100000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -2682,15 +2682,15 @@ Memory Map of the image
     0x080043ea   0x0000000a   Code   RO         4619    i._sputc            mc_w.l(printfa.o)
     0x080043f4   0x00000010   Code   RO         4651    i.atan              m_wm.l(atan.o)
     0x08004404   0x00000018   Code   RO         4679    i.fabs              m_wm.l(fabs.o)
-    0x0800441c   0x00000388   Code   RO         3396    i.main              main.o
-    0x080047a4   0x00000120   Code   RO         3660    i.p_HMC5883_calcData  magnetometr.o
-    0x080048c4   0x0000004c   Code   RO         3747    i.send_string       uart_config.o
-    0x08004910   0x00000010   Data   RO          815    .constdata          stm32f4xx_hal_rcc.o
-    0x08004920   0x0000000c   Data   RO         4237    .constdata          stm32f4_discovery.o
-    0x0800492c   0x00000004   PAD
-    0x08004930   0x00000098   Data   RO         4652    .constdata          m_wm.l(atan.o)
-    0x080049c8   0x00000008   Data   RO         4683    .constdata          m_wm.l(qnan.o)
-    0x080049d0   0x00000020   Data   RO         4737    Region$$Table       anon$$obj.o
+    0x0800441c   0x00000368   Code   RO         3396    i.main              main.o
+    0x08004784   0x00000120   Code   RO         3660    i.p_HMC5883_calcData  magnetometr.o
+    0x080048a4   0x0000004c   Code   RO         3747    i.send_string       uart_config.o
+    0x080048f0   0x00000010   Data   RO          815    .constdata          stm32f4xx_hal_rcc.o
+    0x08004900   0x0000000c   Data   RO         4237    .constdata          stm32f4_discovery.o
+    0x0800490c   0x00000004   PAD
+    0x08004910   0x00000098   Data   RO         4652    .constdata          m_wm.l(atan.o)
+    0x080049a8   0x00000008   Data   RO         4683    .constdata          m_wm.l(qnan.o)
+    0x080049b0   0x00000020   Data   RO         4737    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x000005d8, Max: 0x00020000, ABSOLUTE)
@@ -2726,7 +2726,7 @@ Image component sizes
 
        452          6          0          1          0       5416   lis3dh_driver.o
        896         94          0          4        104       7885   magnetometr.o
-      1166        192          0         20         30      46025   main.o
+      1134        192          0         20         30      46037   main.o
        566         66          0          4         88       7229   mems.o
        392         30          0          0         60       2938   pwm.o
         36          8        392          0       1024        928   startup_stm32f407xx.o
@@ -2748,7 +2748,7 @@ Image component sizes
        428         62          0          6         99       5437   uart_config.o
 
     ----------------------------------------------------------------------
-     12708        860        456         84       1412     520569   Object Totals
+     12676        860        456         84       1412     520581   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         32          0          4          1          7          0   (incl. Padding)
 
@@ -2814,15 +2814,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     18312       1140        616         84       1412     510249   Grand Totals
-     18312       1140        616         84       1412     510249   ELF Image Totals
-     18312       1140        616         84          0          0   ROM Totals
+     18280       1140        616         84       1412     510261   Grand Totals
+     18280       1140        616         84       1412     510261   ELF Image Totals
+     18280       1140        616         84          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                18928 (  18.48kB)
+    Total RO  Size (Code + RO Data)                18896 (  18.45kB)
     Total RW  Size (RW Data + ZI Data)              1496 (   1.46kB)
-    Total ROM Size (Code + RO Data + RW Data)      19012 (  18.57kB)
+    Total ROM Size (Code + RO Data + RW Data)      18980 (  18.54kB)
 
 ==============================================================================
 

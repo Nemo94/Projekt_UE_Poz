@@ -122,7 +122,7 @@ int main(void)
 		send_string(string);
 		
 		//sterowanie silnikiem krokowym na podstawie danych z akcelerometru
-		if( ( roll < -tolerancja_akcelero ) | ( roll > tolerancja_akcelero ) )
+		if( ( roll < -tolerancja_akcelero ) || ( roll > tolerancja_akcelero ) )
 		{
 			//wlaczenie ukadu sterujacego silnikiem krokowym
 			StepperXEnable( MOTOR1 );
@@ -148,7 +148,7 @@ int main(void)
 		} else;
 		
 		//sterowanie serwomechanizmami (przy zalozeniu, ze sterujemy dwoma przy poziomowaniu) na podstawie danych z akcelerometru
-		if( ( pitch < -tolerancja_akcelero ) | ( pitch > tolerancja_akcelero ) )
+		if( ( pitch < -tolerancja_akcelero ) || ( pitch > tolerancja_akcelero ) )
 		{
 			//zadanie kata dla serwomechanizmow
 			ServoSetAngle( SERVO1, pitch );
