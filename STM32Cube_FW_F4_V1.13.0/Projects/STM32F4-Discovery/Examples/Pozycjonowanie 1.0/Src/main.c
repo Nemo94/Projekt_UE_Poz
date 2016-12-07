@@ -127,8 +127,15 @@ int main(void)
 			//wlaczenie ukadu sterujacego silnikiem krokowym
 			StepperXEnable( MOTOR1 );
 			
-			//wykonanie odpowiedniej ilosci krokow
-			StepperXExecute( MOTOR1, roll, 0 );
+			if( roll > 0 )
+			{		
+				//wykonanie odpowiedniej ilosci krokow
+				StepperXExecute( MOTOR1, roll, 0 );
+			} else
+			{
+				//wykonanie odpowiedniej ilosci krokow
+				StepperXExecute( MOTOR1, -roll, 1 );
+			}
 			
 			if( pitch < 0 )
 			{

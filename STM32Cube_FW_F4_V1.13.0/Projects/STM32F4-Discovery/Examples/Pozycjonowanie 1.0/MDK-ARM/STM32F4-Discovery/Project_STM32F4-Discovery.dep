@@ -647,7 +647,7 @@ I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x581
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x581BA194)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_usart.h)(0x581BA194)
 F (..\readme.txt)(0x58468838)()
-F (..\Src\main.c)(0x5846CC4F)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\Inc -I ..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include -I ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc -I ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery --C99-I"C:\Users\Piotrek\Documents\GitHub\Projekt_UE_Poz\STM32Cube_FW_F4_V1.13.0\Projects\STM32F4-Discovery\Examples\Pozycjonowanie 1.0\MDK-ARM\RTE\_STM32F4-Discovery"-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.10.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_STM32F4_DISCO --C99-o stm32f4-discovery\main.o --omf_browse stm32f4-discovery\main.crf --depend stm32f4-discovery\main.d)
+F (..\Src\main.c)(0x5847E6EE)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\Inc -I ..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include -I ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc -I ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery --C99-I"C:\Users\Piotrek\Documents\GitHub\Projekt_UE_Poz\STM32Cube_FW_F4_V1.13.0\Projects\STM32F4-Discovery\Examples\Pozycjonowanie 1.0\MDK-ARM\RTE\_STM32F4-Discovery"-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.10.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_STM32F4_DISCO --C99-o stm32f4-discovery\main.o --omf_browse stm32f4-discovery\main.crf --depend stm32f4-discovery\main.d)
 I (..\Inc\main.h)(0x58468838)
 I (..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\stm32f4_discovery.h)(0x5820D779)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x581BA194)
@@ -683,7 +683,7 @@ I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x581BA1
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x581BA194)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x581BA194)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_usart.h)(0x581BA194)
-I (..\Inc\lis3dh_driver.h)(0x58468BE7)
+I (..\Inc\lis3dh_driver.h)(0x5846D00F)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F66926)
 I (..\Inc\mems.h)(0x58468838)
 I (..\Inc\magnetometr.h)(0x58468838)
@@ -726,7 +726,7 @@ I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x581BA1
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x581BA194)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x581BA194)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_usart.h)(0x581BA194)
-I (..\Inc\lis3dh_driver.h)(0x58468BE7)
+I (..\Inc\lis3dh_driver.h)(0x5846D00F)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F66926)
 I (..\Inc\magnetometr.h)(0x58468838)
 I (..\Inc\stepper_driver.h)(0x58468838)
@@ -767,7 +767,7 @@ I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x581BA1
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x581BA194)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x581BA194)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_usart.h)(0x581BA194)
-I (..\Inc\lis3dh_driver.h)(0x58468BE7)
+I (..\Inc\lis3dh_driver.h)(0x5846D00F)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F66926)
 I (..\Inc\mems.h)(0x58468838)
 I (..\Inc\magnetometr.h)(0x58468838)
@@ -811,7 +811,7 @@ I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x581BA1
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x581BA194)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x581BA194)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_usart.h)(0x581BA194)
-I (..\Inc\lis3dh_driver.h)(0x58468BE7)
+I (..\Inc\lis3dh_driver.h)(0x5846D00F)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F66926)
 I (..\Inc\mems.h)(0x58468838)
 I (..\Inc\stepper_driver.h)(0x58468838)
@@ -852,7 +852,7 @@ I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x581BA1
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x581BA194)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x581BA194)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_usart.h)(0x581BA194)
-I (..\Inc\lis3dh_driver.h)(0x58468BE7)
+I (..\Inc\lis3dh_driver.h)(0x5846D00F)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F66926)
 I (..\Inc\mems.h)(0x58468838)
 I (..\Inc\magnetometr.h)(0x58468838)
@@ -896,7 +896,7 @@ I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x581BA1
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x581BA194)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x581BA194)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_usart.h)(0x581BA194)
-I (..\Inc\lis3dh_driver.h)(0x58468BE7)
+I (..\Inc\lis3dh_driver.h)(0x5846D00F)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F66926)
 I (..\Inc\mems.h)(0x58468838)
 I (..\Inc\magnetometr.h)(0x58468838)
@@ -938,13 +938,13 @@ I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x581BA1
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x581BA194)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x581BA194)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_usart.h)(0x581BA194)
-I (..\Inc\lis3dh_driver.h)(0x58468BE7)
+I (..\Inc\lis3dh_driver.h)(0x5846D00F)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F66926)
 I (..\Inc\mems.h)(0x58468838)
 I (..\Inc\magnetometr.h)(0x58468838)
 I (..\Inc\stepper_driver.h)(0x58468838)
 F (..\Src\lis3dh_driver.c)(0x58468838)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ..\Inc -I ..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include -I ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc -I ..\..\..\..\..\Drivers\BSP\STM32F4-Discovery --C99-I"C:\Users\Piotrek\Documents\GitHub\Projekt_UE_Poz\STM32Cube_FW_F4_V1.13.0\Projects\STM32F4-Discovery\Examples\Pozycjonowanie 1.0\MDK-ARM\RTE\_STM32F4-Discovery"-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.10.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_STM32F4_DISCO --C99-o stm32f4-discovery\lis3dh_driver.o --omf_browse stm32f4-discovery\lis3dh_driver.crf --depend stm32f4-discovery\lis3dh_driver.d)
-I (..\Inc\lis3dh_driver.h)(0x58468BE7)
+I (..\Inc\lis3dh_driver.h)(0x5846D00F)
 I (..\Inc\main.h)(0x58468838)
 I (..\..\..\..\..\Drivers\BSP\STM32F4-Discovery\stm32f4_discovery.h)(0x5820D779)
 I (..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x581BA194)
