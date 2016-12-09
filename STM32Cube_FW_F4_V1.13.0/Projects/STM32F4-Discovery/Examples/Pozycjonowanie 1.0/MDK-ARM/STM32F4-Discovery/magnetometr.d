@@ -38,8 +38,9 @@ stm32f4-discovery\magnetometr.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc
 stm32f4-discovery\magnetometr.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_usart.h
 stm32f4-discovery\magnetometr.o: ..\Inc\lis3dh_driver.h
 stm32f4-discovery\magnetometr.o: ..\Inc\main.h
-stm32f4-discovery\magnetometr.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 stm32f4-discovery\magnetometr.o: ..\Inc\mems.h
 stm32f4-discovery\magnetometr.o: ..\Inc\magnetometr.h
 stm32f4-discovery\magnetometr.o: ..\Inc\stepper_driver.h
 stm32f4-discovery\magnetometr.o: ..\Inc\pwm.h
+stm32f4-discovery\magnetometr.o: ..\Inc\leveling.h
+stm32f4-discovery\magnetometr.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

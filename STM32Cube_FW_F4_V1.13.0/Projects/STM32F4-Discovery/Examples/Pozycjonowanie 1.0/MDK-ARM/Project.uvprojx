@@ -539,6 +539,11 @@
               <FileType>1</FileType>
               <FilePath>..\Src\lis3dh_driver.c</FilePath>
             </File>
+            <File>
+              <FileName>leveling.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\leveling.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

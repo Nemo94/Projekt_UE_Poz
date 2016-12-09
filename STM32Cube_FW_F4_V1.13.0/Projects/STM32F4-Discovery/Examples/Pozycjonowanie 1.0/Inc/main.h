@@ -12,6 +12,7 @@
 #include "magnetometr.h"
 #include "stepper_driver.h"
 #include "pwm.h"
+#include "leveling.h"
 #include <stdio.h>
 
 typedef enum HMC5883_SCALE_t HMC5883_SCALE_t;

@@ -38,8 +38,9 @@ stm32f4-discovery\pwm.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4
 stm32f4-discovery\pwm.o: ..\..\..\..\..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_usart.h
 stm32f4-discovery\pwm.o: ..\Inc\lis3dh_driver.h
 stm32f4-discovery\pwm.o: ..\Inc\main.h
-stm32f4-discovery\pwm.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 stm32f4-discovery\pwm.o: ..\Inc\mems.h
 stm32f4-discovery\pwm.o: ..\Inc\magnetometr.h
+stm32f4-discovery\pwm.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 stm32f4-discovery\pwm.o: ..\Inc\stepper_driver.h
 stm32f4-discovery\pwm.o: ..\Inc\pwm.h
+stm32f4-discovery\pwm.o: ..\Inc\leveling.h

@@ -43,3 +43,4 @@ stm32f4-discovery\lis3dh_driver.o: ..\Inc\magnetometr.h
 stm32f4-discovery\lis3dh_driver.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 stm32f4-discovery\lis3dh_driver.o: ..\Inc\stepper_driver.h
 stm32f4-discovery\lis3dh_driver.o: ..\Inc\pwm.h
+stm32f4-discovery\lis3dh_driver.o: ..\Inc\leveling.h

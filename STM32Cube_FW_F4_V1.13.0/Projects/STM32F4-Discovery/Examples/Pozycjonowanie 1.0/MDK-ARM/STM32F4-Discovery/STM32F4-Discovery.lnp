@@ -27,6 +27,7 @@
 "stm32f4-discovery\stepper_driver.o"
 "stm32f4-discovery\pwm.o"
 "stm32f4-discovery\lis3dh_driver.o"
+"stm32f4-discovery\leveling.o"
 "stm32f4-discovery\stm32f4_discovery.o"
 "stm32f4-discovery\system_stm32f4xx.o"
 --library_type=microlib --strict --scatter "STM32F4-Discovery\STM32F4-Discovery.sct"
