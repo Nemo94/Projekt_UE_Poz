@@ -1,11 +1,12 @@
 #include "leveling.h"
 
 //zmienne z aktualnymi danymi akcelerometru wyrazonymi w stopniach
-float roll = 0;	//obrot wzgledem osi X
+uint16_t roll = 0;	//obrot wzgledem osi X
 float pitch = 0;	//obrot wzgledem osi Y
 
 //tolerancja bledu pomiaru akcelerometru
-float tolerancja_akcelero = 0.5f;
+int tolerancja_roll = 1;
+float tolerancja_pitch = 0.5f;
 
 void leveling( int16_t akcelero_x, int16_t akcelero_y, int16_t akcelero_z )
 {
@@ -14,7 +15,7 @@ void leveling( int16_t akcelero_x, int16_t akcelero_y, int16_t akcelero_z )
 	pitch = atan2( akcelero_y, akcelero_z ) * 180 / M_PI;
 	
 	//sterowanie silnikiem krokowym na podstawie danych z akcelerometru
-	if( ( roll < -tolerancja_akcelero ) || ( roll > tolerancja_akcelero ) )
+	if( ( roll < -tolerancja_roll ) || ( roll > tolerancja_roll ) )
 	{
 		//wlaczenie ukadu sterujacego silnikiem krokowym
 		StepperXEnable( MOTOR1 );
@@ -32,8 +33,8 @@ void leveling( int16_t akcelero_x, int16_t akcelero_y, int16_t akcelero_z )
 		
 		if( pitch < 0 )
 		{
-			//wykonanie obrotu o 180 stopni, aby kat pitch byl dodatni
-			StepperXExecute( MOTOR1, 180, 0 );
+			//wykonanie obrotu o okolo 180 stopni, aby kat pitch byl dodatni
+			StepperXExecute( MOTOR1, 90, 0 );
 		}
 		else
 		{
@@ -47,7 +48,7 @@ void leveling( int16_t akcelero_x, int16_t akcelero_y, int16_t akcelero_z )
 	}
 	
 	//sterowanie serwomechanizmami (przy zalozeniu, ze sterujemy dwoma przy poziomowaniu) na podstawie danych z akcelerometru
-	if( ( pitch < -tolerancja_akcelero ) || ( pitch > tolerancja_akcelero ) )
+	if( pitch > tolerancja_pitch )
 	{
 		//zadanie kata dla serwomechanizmow
 		ServoSetAngle( SERVO1, pitch );
