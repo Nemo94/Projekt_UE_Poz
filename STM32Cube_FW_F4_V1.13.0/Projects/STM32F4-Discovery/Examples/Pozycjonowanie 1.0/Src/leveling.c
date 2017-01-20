@@ -34,7 +34,7 @@ void leveling( int16_t akcelero_x, int16_t akcelero_y, int16_t akcelero_z )
 		if( pitch < 0 )
 		{
 			//wykonanie obrotu o okolo 180 stopni, aby kat pitch byl dodatni
-			StepperXExecute( MOTOR1, 90, 0 );
+			StepperXExecute( MOTOR1, 100, 0 );
 		}
 		else
 		{
